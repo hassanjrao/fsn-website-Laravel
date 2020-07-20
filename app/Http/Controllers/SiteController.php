@@ -30,14 +30,14 @@ class SiteController extends Controller
         return view('welcome',["ctis"=>$cities]);
     }
 
-    public function mlmCities($ct)
+    public function carGurusCities($ct)
     {
         $city = strtolower(preg_replace('/-/', ' ', $ct));
         $cities = Footer::footer();
         $city_info = City::where("city", $city)->get();
-        $content = Content::where("page", "mlm cities")->get();
+        $content = Content::where("page", "cargurus")->get();
 
-        return view("mlm-cities", ["ctis" => $cities, "infos" => $city_info, "content" => $content]);
+        return view("car-gurus-cities", ["ctis" => $cities, "infos" => $city_info, "content" => $content]);
     }
 
     public function networkMarketingCities($ct)

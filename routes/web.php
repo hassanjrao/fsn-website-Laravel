@@ -20,7 +20,7 @@ Route::get('/', "SiteController@index")->name("/");
 
 
 // cities pages routes starts
-Route::get('/mlm-in-{city}', "SiteController@mlmCities")->name("mlm-cities");
+Route::get('/cargurus-in-{city}', "SiteController@CarGurusCities")->name("car-gurus-cities");
 Route::get('/network-marketing-in-{city}', "SiteController@networkMarketingCities")->name("network-marketing-cities");
 Route::get('/mlm-companies-in-{city}', "SiteController@mlmCompaniesCities")->name("mlm-companies-cities");
 // cities pages routes ends

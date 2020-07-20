@@ -21,9 +21,9 @@ onload="getMap()"
                 <div class="col-lg-12">
 
                     @foreach($infos as $info)
-                        <article class="pb-3">
+                        {{-- <article class="pb-3"> --}}
 
-                            <h1>MLM in {{ $info->city }}</h1>
+                            {{-- <h1>ML in {{ $info->city }}</h1>
 
                             <div class="cities-tabs">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -57,7 +57,7 @@ onload="getMap()"
                             </div>
 
 
-                        </article>
+                        </article> --}}
 
 
                         @if ($content->first()!=null)
