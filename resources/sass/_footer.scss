@@ -1,0 +1,134 @@
+/*---------------------
+  Footer
+-----------------------*/
+.footer {
+  background: $primary-color;
+  padding-top: 18px;
+  margin-top: 101px;
+  p {
+    font-size: 14px;
+    color: $white-color;
+  }
+}
+
+.footer__about {
+  margin-bottom: 20px;
+
+  form {
+   
+
+    background: #248b06;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 96%;
+    input {
+      width: 92%;
+      font-size: 16px;
+      padding-left: 20px;
+      margin-bottom: 0.5rem;
+      height: 30px;
+    }
+    textarea {
+      height: 54.5px;
+      width: 92%;
+      font-size: 16px;
+      padding-left: 20px;
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      background: $black-color;
+      color: $white-color;
+
+      &:hover {
+        color: $background-2;
+      }
+    }
+  }
+}
+
+.footer__about__logo {
+  margin-bottom: 15px;
+
+  a {
+    display: inline-block;
+  }
+}
+
+.footer__widget {
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  h6 {
+    color: $normal-color;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    li {
+      list-style: none;
+
+      a {
+        color: $white-color;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+}
+
+.footer__pages{
+  a{
+    line-height: 25px;
+    margin-right: 30px;
+  }
+  
+}
+
+.footer__copyright{
+  padding: 10px 0;
+  a{
+    font-size: 14px;
+    color: $white-color;
+  }
+}
+
+.footer__widget__social {
+  float: right;
+  a {
+    display: inline-block;
+    height: 41px;
+    width: 41px;
+    font-size: 16px;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+    line-height: 38px;
+    text-align: center;
+    background: $white-color;
+    @include transition(all, 0.3s);
+    margin-right: 10px;
+
+    i{
+      color: #248b06;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background: $primary-color;
+      color: $white-color;
+      border-color: $white-color;
+      i{
+        color:$white-color;
+      }
+    }
+  }
+}
