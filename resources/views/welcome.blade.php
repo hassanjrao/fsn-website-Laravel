@@ -127,7 +127,7 @@ Home
         <h3 class="text-center mb-4">MLM FAQ:</h3>
 
         <div class="accordion_head" data-node="#1">1. How should we recruit people?
-            <div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+            <div class="plusminus"><i class="fas fa-plus-square" style="color: #12343b;"></i></div>
         </div>
         <div class="accordion_body hide">
             <p>You should build a team initially by talking with the people you already know are a right fit for the MLM
@@ -140,7 +140,7 @@ Home
         </div>
 
         <div class="accordion_head" data-node="#1">2. How do does one many money in MLM?
-            <div class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+            <div class="plusminus"><i class="fas fa-plus-square" style="color: #12343b;"></i></div>
         </div>
         <div class="accordion_body hide">
             <p>You earn money from retail profits of your personal sales.
@@ -153,7 +153,7 @@ Home
         </div>
 
         <div class="accordion_head" data-node="#1">3. Is MLM legal?<div class="plusminus"><i class="fas fa-plus-square"
-                    style="color: #7fad39;"></i></div>
+                    style="color: #12343b"></i></div>
         </div>
         <div class="accordion_body hide">
             <p>Of course Yes!
@@ -165,7 +165,7 @@ Home
         </div>
 
         <div class="accordion_head" data-node="#1">4. What is the best company in MLM to join?<div class="plusminus"><i
-                    class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+                    class="fas fa-plus-square" style="color: #12343b"></i></div>
         </div>
         <div class="accordion_body hide">
             <p>That really depends on what suits you and the integrity of the company.
@@ -179,7 +179,7 @@ Home
         </div>
 
         <div class="accordion_head" data-node="#1">5. Is this site or information for my city/country?<div
-                class="plusminus"><i class="fas fa-plus-square" style="color: #7fad39;"></i></div>
+                class="plusminus"><i class="fas fa-plus-square" style="color: #12343b"></i></div>
         </div>
         <div class="accordion_body hide">
             <p>Yes. Most MLM's work worldwide. Most of the information we offer

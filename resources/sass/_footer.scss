@@ -17,7 +17,7 @@
   form {
    
 
-    background: #248b06;
+    background: $seconday-color;
     padding: 1.5rem;
     border-radius: 10px;
     width: 96%;
@@ -115,7 +115,7 @@
     margin-right: 10px;
 
     i{
-      color: #248b06;
+      color: $seconday-color;
     }
 
     &:last-child {
