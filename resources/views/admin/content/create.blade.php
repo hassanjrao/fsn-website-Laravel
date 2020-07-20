@@ -42,31 +42,32 @@
 
                                         @csrf
                                         <div class="form-group">
-                                            <select name="page" id="page" class="form-control">
-                                                <option disabled selected>Select Page</option>
-                                                <option value="mlm">MLM</option>
-                                                <option value="mlm companies">MLM Companies</option>
-                                                <option value="mlm company">MLM Company</option>
-                                                <option value="mlm business">MLM Business</option>
-                                                <option value="mlm software">MLM Software</option>
-                                                <option value="network marketing">Network Marketing</option>
-                                                <option value="multi level marketing">Multi Level Marketing</option>
-                                                <option value="multi level marketers">Multi Level Marketers</option>
-                                                <option value="direct marketing">Direct Marketing</option>
-                                                <option value="direct selling companies">Direct Selling Companies</option>
-                                                <option disabled>------------------------------------------------------------</option>
 
-                                                <option value="mlm cities">MlM Cities</option>
-                                                <option value="mlm companies cities">MLM Companies Cities</option>
-                                                <option value="mlm company cities">MLM Company Cities</option>
-                                                <option value="mlm business cities">MLM Business Cities</option>
-                                                <option value="mlm software cities">MLM Software Cities</option>
-                                                <option value="network marketing cities">Network Marketing Cities</option>
-                                                <option value="multi level marketing cities">Multi Level Marketing Cities</option>
-                                                <option value="multi level marketers cities">Multi Level Marketers Cities</option>
-                                                <option value="direct marketing cities">Direct Marketing Cities</option>
-                                                <option value="direct selling companies cities">Direct Selling Companies Cities</option>
-                                                
+                                            <select name="page" id="page" class="form-control">
+ 
+                                                <option disabled selected>Select Page</option>
+                                                <option value="cars for sale">Cars For Sale</option>
+                                                <option value="cargurus">Cargurus</option>
+                                                <option value="cargurus used cars">Cargurus Used Cars</option>
+                                                <option value="autozone">Autozone</option>
+                                                <option value="autotrader">Autotrader</option>
+                                                <option value="trulia">Trulia</option>
+                                                <option value="autozone near me">Autozone Near Me</option>
+                                                <option value="used cars">Used Cars</option>
+                                                <option value="used cars for sale">Used Cars For Sale</option>
+                                                <option value="used cars for sale near me">Used Cars For Sale Near Me</option>
+                                                <option value="homes">Homes</option>
+                                                <option value="house for sale">House For Sale</option>
+                                                <option value="homes for sale">Homes For Sale</option>
+                                                <option value="house for sale near me">House For sale Near Me</option>
+                                                <option value="homes for sale near me">Homes For sale Near Me</option>
+                                                <option value="car for sale near me">Car For Sale Near Me</option>
+                                                <option value="motorcycle sale">Motorcycle Sale</option>
+                                                <option value="classic cars for sale">Classic Cars For Sale</option>
+                                                <option value="bikes shop">Bikes Shop</option>
+                                                <option value="bikes shop near me">Bikes Shop Near Me</option>
+                                               
+                                               
                                             </select>
                                         </div>
 
