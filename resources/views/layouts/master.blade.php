@@ -169,53 +169,87 @@
 
     <section class="hero pt-5">
 
-        <div class="container">
+        <div class="container-fluid pl-5 pr-5">
             <div class="row">
-                <div class="col-lg-3 ">
+                <div class="col-lg-4 ">
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
                             <span>Menu</span>
                         </div>
-                        <ul>
-                            <li>MLM</li>
 
-                                  
 
-                            <ul>
-                                <li><a href="{{ route("mlm") }}">cars for sale</a></li>
-                                <li><a href="{{ route("mlm-companies") }}">cargurus</a></li>
-                                <li><a href="#">cargurus used cars</a></li>
-                                <li><a href="#">autozone</a></li>
-                                <li><a href="#">autotrader</a></li>
-                                <li><a href="#">autozone</a></li>
-                                <li><a href="#">autotrader</a></li>
-                                <li><a href="#">trulia</a></li>
-                                <li><a href="#">autozone near me</a></li>
-                                <li><a href="#">used cars</a></li>
-                                <li><a href="#">used cars for sale</a></li>
-                                <li><a href="#">used cars for sale near me</a></li>
+                        <div class="row">
+                            <div class="col-lg-6">
 
-                            </ul>
+                                <ul>
+                                    <li><a href="{{ route("mlm") }}">cars for sale</a></li>
+                                    <li><a href="{{ route("mlm-companies") }}">cargurus</a></li>
+                                    <li><a href="#">cargurus used cars</a></li>
+                                    <li><a href="#">autozone</a></li>
+                                    <li><a href="#">autotrader</a></li>
 
-                        </ul>
+                                </ul>
 
-                        <ul>
-                            <li>Network Marketing</li>
 
-                            <ul>
-                                <li><a href="network-marketing.php">network marketing</a></li>
-                                <li><a href="#">multi level marketing</a></li>
-                                <li><a href="multi-level-marketers.php">multi level marketers</a></li>
-                                <li><a href="direct-marketing.php">direct marketing</a></li>
-                                <li><a href="direct-selling-companies.php">direct selling companies</a></li>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><a href="#">trulia</a></li>
+                                    <li><a href="#">autozone near me</a></li>
+                                    <li><a href="#">used cars</a></li>
+                                    <li><a href="#">used cars for sale</a></li>
+                                    <li><a href="#">used cars for sale near me</a></li>
 
-                            </ul>
-                        </ul>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <br>
+
+                       
+
+
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    
+                                   
+                                   <li><a href="#">homes</a></li> 
+                                   <li><a href="#">house for sale</a></li>
+                                   <li><a href="#">homes for sale</a></li>
+                                    <li><a href="#"> house for sale near me</a></li>
+                                    <li><a href="#"> homes for sale near me</a></li>
+                                    
+                                   
+
+                                </ul>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><a href="#">car for sale near me</a></li>
+                                    <li><a href="#">motorcycle sale</a></li>
+                                    <li><a href="#">classic cars for sale</a></li>
+                                    <li><a href="#">bikes shop</a></li>
+                                    <li><a href="#">bikes shop near me</a></li>
+
+                                    
+
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                      
                     </div>
                 </div>
 
-                <div class="col-lg-9 slider">
+                <div class="col-lg-8 slider">
 
                     <div class="slider23 ">
 
