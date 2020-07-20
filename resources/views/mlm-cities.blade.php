@@ -121,7 +121,7 @@ onload="getMap()"
 
 
 
-{{-- 
+
 @section('footer')
 
 
@@ -149,7 +149,7 @@ onload="getMap()"
 @include('footer')
 
 @endsection
- --}}
+
 
 
 

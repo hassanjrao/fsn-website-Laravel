@@ -1,4 +1,4 @@
-{{-- <!-- Footer Section Begin -->
+<!-- Footer Section Begin -->
 
 <footer class="footer">
 
@@ -309,4 +309,4 @@
         document.getElementById("enquiry-submit-f").disabled = true;
 
     };
-</script> --}}
+</script>
