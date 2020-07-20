@@ -230,7 +230,7 @@ Home
 @endsection
 
     
-
+{{-- 
 @section('footer')
 
 @php
@@ -253,4 +253,4 @@ shuffle($n);
 @endphp
 
 @include('footer')
-@endsection
+@endsection --}}
