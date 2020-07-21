@@ -180,7 +180,7 @@
 
 
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
 
                                 <ul>
                                     <li><a href="{{ route("mlm") }}">cars for sale</a></li>
@@ -193,7 +193,7 @@
 
 
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <ul>
                                     <li><a href="#">trulia</a></li>
                                     <li><a href="#">autozone near me</a></li>
@@ -212,7 +212,7 @@
 
 
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <ul>
                                     
                                    
@@ -227,18 +227,13 @@
                                 </ul>
 
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <ul>
                                     <li><a href="#">car for sale near me</a></li>
                                     <li><a href="#">motorcycle sale</a></li>
                                     <li><a href="#">classic cars for sale</a></li>
                                     <li><a href="#">bikes shop</a></li>
                                     <li><a href="#">bikes shop near me</a></li>
-
-                                    
-
-
-
 
                                 </ul>
                             </div>

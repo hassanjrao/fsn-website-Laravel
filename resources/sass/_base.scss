@@ -26,8 +26,8 @@ body {
   height: 100%;
   font-family: 'Cairo', sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 h1,

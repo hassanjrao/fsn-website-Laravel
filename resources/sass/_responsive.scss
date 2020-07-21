@@ -88,12 +88,12 @@
   .humberger__open {
     display: block;
     font-size: 22px;
-    color: #1c1c1c;
+    color: $white-color;
     height: 35px;
     width: 35px;
     line-height: 33px;
     text-align: center;
-    border: 1px solid #1c1c1c;
+    border: 1px solid $white-color;
     cursor: pointer;
     position: absolute;
     right: 15px;
@@ -413,12 +413,12 @@
   .humberger__open {
     display: block;
     font-size: 22px;
-    color: #1c1c1c;
+    color: $white-color;
     height: 35px;
     width: 35px;
     line-height: 33px;
     text-align: center;
-    border: 1px solid #1c1c1c;
+    border: 1px solid $white-color;
     cursor: pointer;
     position: absolute;
     right: 15px;

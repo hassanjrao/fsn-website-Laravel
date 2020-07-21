@@ -27,8 +27,8 @@ body {
   height: 100%;
   font-family: "Cairo", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -122,7 +122,7 @@ ol {
   right: 0;
   height: 4px;
   width: 80px;
-  background: #2d545e;
+  background: #002868;
   content: "";
   margin: 0 auto;
 }
@@ -160,7 +160,7 @@ ol {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
-  background: #2d545e;
+  background: #002868;
   letter-spacing: 2px;
 }
 
@@ -171,7 +171,7 @@ ol {
   text-transform: uppercase;
   display: inline-block;
   padding: 13px 30px 12px;
-  background: #2d545e;
+  background: #002868;
   border: none;
 }
 
@@ -245,7 +245,7 @@ ol {
 -----------------------*/
 
 .header {
-  background: #2d545e;
+  background: #002868;
 }
 
 .header__top {
@@ -424,7 +424,7 @@ ol {
   position: absolute;
   left: 0;
   top: 50px;
-  background: #2d545e;
+  background: #002868;
   width: 180px;
   z-index: 9;
   padding: 5px 0;
@@ -502,7 +502,7 @@ ol {
 .header__cart ul li a span {
   height: 13px;
   width: 13px;
-  background: #2d545e;
+  background: #002868;
   font-size: 10px;
   color: #ffffff;
   line-height: 13px;
@@ -565,7 +565,7 @@ ol {
 }
 
 .hero__categories__all {
-  background: #2d545e;
+  background: #002868;
   position: relative;
   padding: 10px 25px 10px 40px;
   cursor: pointer;
@@ -681,7 +681,7 @@ ol {
 
 .hero__search__phone__icon {
   font-size: 18px;
-  color: #2d545e;
+  color: #002868;
   height: 50px;
   width: 50px;
   background: #f5f5f5;
@@ -719,7 +719,7 @@ ol {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 4px;
-  color: #2d545e;
+  color: #002868;
 }
 
 .hero__text h2 {
@@ -821,7 +821,7 @@ ol {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background: #2d545e;
+  background: #002868;
   content: "";
   opacity: 0;
 }
@@ -865,8 +865,8 @@ ol {
 }
 
 .featured__item__pic__hover li:hover a {
-  background: #2d545e;
-  border-color: #2d545e;
+  background: #002868;
+  border-color: #002868;
 }
 
 .featured__item__pic__hover li:hover a i {
@@ -1286,12 +1286,12 @@ ol {
 }
 
 .pagination a {
-  color: #2d545e;
+  color: #002868;
   font-weight: 600;
 }
 
 .pagination a:hover {
-  color: #2d545e;
+  color: #002868;
   font-weight: bolder;
 }
 
@@ -1389,7 +1389,7 @@ ol {
 }
 
 .blog__details__widget .blog__details__social a:hover {
-  color: #2d545e;
+  color: #002868;
 }
 
 .blog__details__widget .blog__details__social a:last-child {
@@ -1401,7 +1401,7 @@ ol {
 -----------------------*/
 
 .footer {
-  background: #2d545e;
+  background: #002868;
   padding-top: 18px;
   margin-top: 101px;
 }
@@ -1416,7 +1416,7 @@ ol {
 }
 
 .footer__about form {
-  background: #12343b;
+  background: #001942;
   padding: 1.5rem;
   border-radius: 10px;
   width: 96%;
@@ -1514,7 +1514,7 @@ ol {
 }
 
 .footer__widget__social a i {
-  color: #12343b;
+  color: #001942;
 }
 
 .footer__widget__social a:last-child {
@@ -1522,7 +1522,7 @@ ol {
 }
 
 .footer__widget__social a:hover {
-  background: #2d545e;
+  background: #002868;
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -1623,12 +1623,12 @@ ol {
   .humberger__open {
     display: block;
     font-size: 22px;
-    color: #1c1c1c;
+    color: #ffffff;
     height: 35px;
     width: 35px;
     line-height: 33px;
     text-align: center;
-    border: 1px solid #1c1c1c;
+    border: 1px solid #ffffff;
     cursor: pointer;
     position: absolute;
     right: 15px;
@@ -1712,7 +1712,7 @@ ol {
   .humberger__menu__cart ul li a span {
     height: 13px;
     width: 13px;
-    background: #2d545e;
+    background: #002868;
     font-size: 10px;
     color: #ffffff;
     line-height: 13px;
@@ -1791,7 +1791,7 @@ ol {
   .humberger__menu__wrapper .slicknav_nav a:hover {
     border-radius: 0;
     background: transparent;
-    color: #2d545e;
+    color: #002868;
   }
 
   .humberger__menu__wrapper .slicknav_nav .slicknav_row,
@@ -1941,12 +1941,12 @@ ol {
   .humberger__open {
     display: block;
     font-size: 22px;
-    color: #1c1c1c;
+    color: #ffffff;
     height: 35px;
     width: 35px;
     line-height: 33px;
     text-align: center;
-    border: 1px solid #1c1c1c;
+    border: 1px solid #ffffff;
     cursor: pointer;
     position: absolute;
     right: 15px;
@@ -2030,7 +2030,7 @@ ol {
   .humberger__menu__cart ul li a span {
     height: 13px;
     width: 13px;
-    background: #2d545e;
+    background: #002868;
     font-size: 10px;
     color: #ffffff;
     line-height: 13px;
@@ -2109,7 +2109,7 @@ ol {
   .humberger__menu__wrapper .slicknav_nav a:hover {
     border-radius: 0;
     background: transparent;
-    color: #2d545e;
+    color: #002868;
   }
 
   .humberger__menu__wrapper .slicknav_nav .slicknav_row,
@@ -2296,7 +2296,7 @@ ol {
   transform: translate(-50%, -50%);
   font-size: 18px;
   font-weight: bold;
-  background: #2d545e;
+  background: #002868;
   color: #ffffff;
   border: 3px solid #cce5ff;
   z-index: 2;
@@ -2342,14 +2342,14 @@ ol {
 }
 
 .accordion_head {
-  color: #2d545e;
+  color: #002868;
   cursor: pointer;
   font-family: arial;
   font-size: 14px;
   margin: 0 0 1px 0;
   padding: 7px 11px;
   font-weight: bold;
-  border: 1px solid #12343b;
+  border: 1px solid #001942;
 }
 
 .accordion_body p {
