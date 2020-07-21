@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Homeqw
+Home
 @endsection
 
 @section('content')
