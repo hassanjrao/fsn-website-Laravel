@@ -13,6 +13,7 @@ class AdminCityController extends Controller
     public function index()
     {
         
+        
         $cities=City::all();
 
         return view("admin.city.index",["cities"=>$cities]);

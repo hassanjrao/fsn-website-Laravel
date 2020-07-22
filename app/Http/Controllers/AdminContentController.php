@@ -42,6 +42,7 @@ class AdminContentController extends Controller
     {
         $page=request("page");
         $content=request("content");
+        $city=request("city");
 
         Content::where("id",$id)->update(["page"=>$page,"content"=>$content]);
 

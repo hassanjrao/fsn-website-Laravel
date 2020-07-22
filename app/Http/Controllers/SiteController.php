@@ -23,7 +23,6 @@ class SiteController extends Controller
 
     public function index()
     {
-        
 
 
         $cities=Footer::footer();

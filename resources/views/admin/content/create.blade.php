@@ -36,7 +36,7 @@
                                     @include('admin/flash-msg')
 
                                     <br>
-                                  
+
                                     <form action="{{ route("admin.content.store") }}" method="post"
                                         enctype="multipart/form-data">
 
@@ -44,7 +44,7 @@
                                         <div class="form-group">
 
                                             <select name="page" id="page" class="form-control">
- 
+
                                                 <option disabled selected>Select Page</option>
                                                 <option value="cars for sale">Cars For Sale</option>
                                                 <option value="cargurus">Cargurus</option>
@@ -55,7 +55,8 @@
                                                 <option value="autozone near me">Autozone Near Me</option>
                                                 <option value="used cars">Used Cars</option>
                                                 <option value="used cars for sale">Used Cars For Sale</option>
-                                                <option value="used cars for sale near me">Used Cars For Sale Near Me</option>
+                                                <option value="used cars for sale near me">Used Cars For Sale Near Me
+                                                </option>
                                                 <option value="homes">Homes</option>
                                                 <option value="house for sale">House For Sale</option>
                                                 <option value="homes for sale">Homes For Sale</option>
@@ -66,8 +67,8 @@
                                                 <option value="classic cars for sale">Classic Cars For Sale</option>
                                                 <option value="bikes shop">Bikes Shop</option>
                                                 <option value="bikes shop near me">Bikes Shop Near Me</option>
-                                               
-                                               
+
+
                                             </select>
                                         </div>
 
@@ -108,6 +109,10 @@
 <script
     src="../../../admin-assets/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js">
 </script>
+
+<script
+    src="../../../admin-assets/assets/plugins/tinymce-variable-master/src/plugin.js">
+</script>
 <script src="https://cdn.tiny.cloud/1/rikps930c10cl6vxmoq7viyjr9bhgzs8ukeyn4y0080ytyf6/tinymce/5/tinymce.min.js"
     referrerpolicy="origin"></script>
 
@@ -115,7 +120,12 @@
     $(document).ready(function () {
 
         tinymce.init({
-            selector: 'textarea'
+            selector: 'textarea',
+            plugins: "variable",
+            variable_mapper: {
+                account_id: "Account ID",
+                email: "E-mail address"
+            }
         });
 
     });

@@ -40,7 +40,7 @@
                                                 <tr>
 
                                                     <th data-breakpoints="xs">ID</th>
-                                                    <th data-breakpoints="xs">Content</th>
+                                                    {{-- <th data-breakpoints="xs">Content</th> --}}
                                                     <th data-breakpoints="md">Page Name</th>
                                                     <th data-breakpoints="xs sm md">Edit/Delete</th>
 
@@ -60,13 +60,13 @@
                                                                 echo $a++;
                                                 @endphp</p>
                                                 </td>
-                                                <td>
+                                                {{-- <td>
                                                     @php
                                                     
-                                                        $content1=substr($content->content,0,450)."......................";
+                                                        $content1=chop(substr($content->content,0,450),"")."......................";
                                                     @endphp
-                                                    <p class="c_name">{!!$content1 !!}</p>
-                                                </td>
+                                                    <p class="c_name">@{{$content1}}</p>
+                                                </td> --}}
                                                 <td>
                                                     <p class="c_name">{{ $content->page }}</p>
                                                 </td>

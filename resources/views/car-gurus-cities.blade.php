@@ -20,11 +20,16 @@ onload="getMap()"
             <div class="row">
                 <div class="col-lg-12">
 
-                    @foreach($infos as $info)
-                        {{-- <article class="pb-3"> --}}
+                    {{-- {{$infos->first()->$city }} --}}
 
-                            {{-- <h1>ML in {{ $info->city }}</h1>
+                    {{-- {{ $infos->first()->city }} --}}
 
+
+
+
+                    {{-- <article class="pb-3"> --}}
+
+                    {{-- 
                             <div class="cities-tabs">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
@@ -49,68 +54,84 @@ onload="getMap()"
                                         aria-labelledby="info">Lorem Ipsum</div>
                                     <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email">
                                         {{ $info->email }}</div>
-                                    <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone">
-                                        {{ $info->phone }}</div>
-                                    <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web">
-                                        {{ $info->url }}</div>
-                                </div>
-                            </div>
-
-
-                        </article> --}}
-
-
-                        @if ($content->first()!=null)
-                        {!!$content->first()->content!!}          
-                        @endif
-                            
-
-
-
-                        <h2 class="pb-3 text-center">Find us in: </h2>
-
-                        <div style="width: 100%; height: 450px" id="mapContainer">
-                        </div>
-
-
-
-                        <div class="cities-tabs">
-                            <ul class="nav nav-tabs" id="myTab2" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="#info2" data-toggle="tab" href="#info2" role="tab"
-                                        aria-controls="info2" aria-selected="true">More Info</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="#email2" data-toggle="tab" href="#email2" role="tab"
-                                        aria-controls="email2" aria-selected="false">Email</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="#phone2" data-toggle="tab" href="#phone2" role="tab"
-                                        aria-controls="phone2" aria-selected="false">Phone</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="#web2" data-toggle="tab" href="#web2" role="tab"
-                                        aria-controls="web2" aria-selected="false">Website</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent2">
-                                <div class="tab-pane fade show active" id="info2" role="tabpanel"
-                                    aria-labelledby="info2">Lorem Ipsum</div>
-                                <div class="tab-pane fade" id="email2" role="tabpanel" aria-labelledby="email2">
-                                    {{ $info->email }}</div>
-                                <div class="tab-pane fade" id="phone2" role="tabpanel" aria-labelledby="phone2">
-                                    {{ $info->phone }}</div>
-                                <div class="tab-pane fade" id="web2" role="tabpanel" aria-labelledby="web2">
-                                    {{ $info->url }}</div>
-                            </div>
-                        </div>
-
-                    @endforeach
-                </div>
-
-
+                <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone">
+                    {{ $info->phone }}</div>
+                <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web">
+                    {{ $info->url }}</div>
             </div>
         </div>
+
+
+        </article> --}}
+
+
+        <br><br>
+
+        <div id="contentMCE">
+
+            @if($content->first()!=null)
+            @php
+                $content= str_replace('{($_CITY)}',  $infos->first()->city ,$content->first()->content);
+
+                
+            @endphp
+
+            {!!$content!!}
+
+            
+               
+
+
+            @endif
+        </div>
+
+
+
+
+
+        <h2 class="pb-3 text-center">Find us in: </h2>
+
+        <div style="width: 100%; height: 450px" id="mapContainer">
+        </div>
+
+
+
+        <div class="cities-tabs">
+            <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="#info2" data-toggle="tab" href="#info2" role="tab"
+                        aria-controls="info2" aria-selected="true">More Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="#email2" data-toggle="tab" href="#email2" role="tab" aria-controls="email2"
+                        aria-selected="false">Email</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="#phone2" data-toggle="tab" href="#phone2" role="tab" aria-controls="phone2"
+                        aria-selected="false">Phone</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="#web2" data-toggle="tab" href="#web2" role="tab" aria-controls="web2"
+                        aria-selected="false">Website</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent2">
+                <div class="tab-pane fade show active" id="info2" role="tabpanel" aria-labelledby="info2">Lorem Ipsum
+                </div>
+                <div class="tab-pane fade" id="email2" role="tabpanel" aria-labelledby="email2">
+                    {{ $infos->first()->email }}</div>
+                <div class="tab-pane fade" id="phone2" role="tabpanel" aria-labelledby="phone2">
+                    {{ $infos->first()->phone }}</div>
+                <div class="tab-pane fade" id="web2" role="tabpanel" aria-labelledby="web2">
+                    {{ $infos->first()->url }}</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+    </div>
     </div>
 </main>
 
@@ -155,6 +176,8 @@ onload="getMap()"
 
 
 @section('scripts')
+
+
 <script>
     document.getElementById("mapContainer").addEventListener("load", getMap);
 
@@ -205,6 +228,7 @@ onload="getMap()"
             }
         });
     }
+
 
 </script>
 @endsection
