@@ -60,30 +60,59 @@
 
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href=" {{ route("/") }}">Home</a></li>
-                <li><a href="#">MLM</a>
+                <li class="active"><a href=" {{ route("/") }}">Home</a>
+
                     <ul class="header__menu__dropdown">
-                        <li><a href="{{ route("mlm") }}">MLM</a></li>
-                        <li><a href="{{ route("mlm-companies") }}">MLM Companies</a></li>
-                        <li><a href="#">MLM Company</a></li>
-                        <li><a href="#">MLM Business</a></li>
-                        <li><a href="#">MLM Software</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="blog-list.php">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Companies</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="{{ route("mlm") }}">Car Gurus</a></li>
+                        <li><a href="{{ route("mlm-companies") }}">Autozone</a></li>
+                        <li><a href="#">Autozone near me</a></li>
+                        <li><a href="#">Autotrader</a></li>
+                        <li><a href="#">Trulia</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#">Network Marketing</a>
+                <li><a href="#">Homes & Houses</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="network-marketing.php">Network Marketing</a></li>
-                        <li><a href="#">Multi Level Marketing</a></li>
-                        <li><a href="multi-level-marketers.php">Multi Level Marketers</a></li>
-                        <li><a href="direct-marketing.php">Direct Marketing</a></li>
-                        <li><a href="direct-selling-companies.php">Direct Selling Companies</a></li>
+                        <li><a href="network-marketing.php">Homes</a></li>
+                        <li><a href="#">Homes for sale</a></li>
+                        <li><a href="multi-level-marketers.php">Homes for sale near me</a></li>
+                        <li><a href="direct-marketing.php">house for sale</a></li>
+                        <li><a href="direct-selling-companies.php">house for sale near me</a></li>
                     </ul>
 
                 </li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="blog-list.php">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+
+                <li><a href="#">Cars</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="network-marketing.php">cars for sale</a></li>
+                        <li><a href="#">used cars</a></li>
+                        <li><a href="multi-level-marketers.php">bikes shop</a></li>
+                        <li><a href="direct-marketing.php">used cars for sale</a></li>
+                        <li><a href="direct-selling-companies.php">motorcycle sale</a></li>
+                    </ul>
+
+                </li>
+
+                <li><a href="#">Bikes & Cars</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="network-marketing.php">bikes shop near me</a></li>
+                        <li><a href="#">carGurus used cars</a></li>
+                        <li><a href="multi-level-marketers.php">car for sale near me</a></li>
+                        <li><a href="direct-marketing.php">used cars for sale near me</a></li>
+                        <li><a href="direct-selling-companies.php">classic cars for sale</a></li>
+                    </ul>
+
+                </li>
+
+
+
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -123,31 +152,59 @@
 
                         <ul>
 
-                            <li class="active"><a href=" {{ route("/") }}">Home</a></li>
-                            <li><a href="#">MLM</a>
+                            <li class="active"><a href=" {{ route("/") }}">Home</a>
 
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="{{ route("mlm") }}">MLM</a></li>
-                                    <li><a href="{{ route("mlm-companies") }}">MLM Companies</a></li>
-                                    <li><a href="#">MLM Company</a></li>
-                                    <li><a href="mlm-business.php">MLM Business</a></li>
-                                    <li><a href="mlm-software.php">MLM Software</a></li>
+                                    <li><a href="about.php">About</a></li>
+                                    <li><a href="blog-list.php">Blog</a></li>
+                                    <li><a href="#">Contact</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Network Marketing</a>
-
+                            <li><a href="#">Companies</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="network-marketing.php">Network Marketing</a></li>
-                                    <li><a href="#">Multi Level Marketing</a></li>
-                                    <li><a href="multi-level-marketers.php">Multi Level Marketers</a></li>
-                                    <li><a href="direct-marketing.php">Direct Marketing</a></li>
-                                    <li><a href="direct-selling-companies.php">Direct Selling Companies</a></li>
+                                    <li><a href="{{ route("mlm") }}">Car Gurus</a></li>
+                                    <li><a href="{{ route("mlm-companies") }}">Autozone</a></li>
+                                    <li><a href="#">Autozone near me</a></li>
+                                    <li><a href="#">Autotrader</a></li>
+                                    <li><a href="#">Trulia</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Homes & houses</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="network-marketing.php">Homes</a></li>
+                                    <li><a href="#">Homes for sale</a></li>
+                                    <li><a href="multi-level-marketers.php">Homes for sale near me</a></li>
+                                    <li><a href="direct-marketing.php">house for sale</a></li>
+                                    <li><a href="direct-selling-companies.php">house for sale near me</a></li>
                                 </ul>
 
                             </li>
-                            <li><a href="about.php">About</a></li>
-                            <li><a href="blog-list.php">Blog</a></li>
-                            <li><a href="#" class="contact-btn">Contact</a></li>
+
+                            <li><a href="#">Cars</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="network-marketing.php">cars for sale</a></li>
+                                    <li><a href="#">used cars</a></li>
+                                    <li><a href="multi-level-marketers.php">bikes shop</a></li>
+                                    <li><a href="direct-marketing.php">used cars for sale</a></li>
+                                    <li><a href="direct-selling-companies.php">motorcycle sale</a></li>
+                                </ul>
+
+                            </li>
+
+                            <li><a href="#">Bikes & Cars</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="network-marketing.php">bikes shop near me</a></li>
+                                    <li><a href="#">carGurus used cars</a></li>
+                                    <li><a href="multi-level-marketers.php">car for sale near me</a></li>
+                                    <li><a href="direct-marketing.php">used cars for sale near me</a></li>
+                                    <li><a href="direct-selling-companies.php">classic cars for sale</a></li>
+                                </ul>
+
+                            </li>
+
+
+
                         </ul>
                     </nav>
                 </div>
@@ -183,64 +240,79 @@
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
 
                                 <ul>
-                                    <li><a href="{{ route("mlm") }}">cars for sale</a></li>
-                                    <li><a href="{{ route("mlm-companies") }}">cargurus</a></li>
-                                    <li><a href="#">cargurus used cars</a></li>
-                                    <li><a href="#">autozone</a></li>
-                                    <li><a href="#">autotrader</a></li>
-
+                                    <li><a href="#">Companies</a>
+                                        <ul class="header__menu__dropdown">
+                                            <li><a href="{{ route("mlm") }}">Car Gurus</a></li>
+                                            <li><a href="{{ route("mlm-companies") }}">Autozone</a>
+                                            </li>
+                                            <li><a href="#">Autozone near me</a></li>
+                                            <li><a href="#">Autotrader</a></li>
+                                            <li><a href="#">Trulia</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
+
 
 
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <ul>
-                                    <li><a href="#">trulia</a></li>
-                                    <li><a href="#">autozone near me</a></li>
-                                    <li><a href="#">used cars</a></li>
-                                    <li><a href="#">used cars for sale</a></li>
-                                    <li><a href="#">used cars for sale near me</a></li>
+                                    <li><a href="#">Homes & houses</a>
+                                        <ul class="header__menu__dropdown">
+                                            <li><a href="network-marketing.php">Homes</a></li>
+                                            <li><a href="#">Homes for sale</a></li>
+                                            <li><a href="multi-level-marketers.php">Homes for sale near me</a></li>
+                                            <li><a href="direct-marketing.php">house for sale</a></li>
+                                            <li><a href="direct-selling-companies.php">house for sale near me</a></li>
+                                        </ul>
 
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
                         <br>
 
-                       
+
 
 
 
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <ul>
-                                    
-                                   
-                                   <li><a href="#">homes</a></li> 
-                                   <li><a href="#">house for sale</a></li>
-                                   <li><a href="#">homes for sale</a></li>
-                                    <li><a href="#"> house for sale near me</a></li>
-                                    <li><a href="#"> homes for sale near me</a></li>
-                                    
-                                   
 
+                                    <li><a href="#">Cars</a>
+                                        <ul class="header__menu__dropdown">
+                                            <li><a href="network-marketing.php">cars for sale</a></li>
+                                            <li><a href="#">used cars</a></li>
+                                            <li><a href="multi-level-marketers.php">bikes shop</a></li>
+                                            <li><a href="direct-marketing.php">used cars for sale</a></li>
+                                            <li><a href="direct-selling-companies.php">motorcycle sale</a></li>
+                                        </ul>
+
+                                    </li>
                                 </ul>
 
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <ul>
-                                    <li><a href="#">car for sale near me</a></li>
-                                    <li><a href="#">motorcycle sale</a></li>
-                                    <li><a href="#">classic cars for sale</a></li>
-                                    <li><a href="#">bikes shop</a></li>
-                                    <li><a href="#">bikes shop near me</a></li>
-
+                                    <li><a href="#">Bikes & Cars</a>
+                                        <ul class="header__menu__dropdown">
+                                            <li><a href="network-marketing.php">bikes shop near me</a></li>
+                                            <li><a href="#">carGurus used cars</a></li>
+                                            <li><a href="multi-level-marketers.php">car for sale near me</a></li>
+                                            <li><a href="direct-marketing.php">used cars for sale near me</a></li>
+                                            <li><a href="direct-selling-companies.php">classic cars for sale</a></li>
+                                        </ul>
+    
+                                    </li>
                                 </ul>
+                               
                             </div>
                         </div>
 
 
-                      
+
                     </div>
                 </div>
 

@@ -20,7 +20,7 @@
 
 
                         <div class="footer__widget ">
-                            <p class="mb-1">MLM in: </p>
+                            <p class="mb-1">Cars for sale in: </p>
                             <ul>
                                 <?php
 
@@ -57,7 +57,7 @@
 
                         <div class="footer__widget">
 
-                            <p class="mb-1">Network Marketing in:</p>
+                            <p class="mb-1">CarGurus in:</p>
                             <ul>
 
                                 <?php
@@ -107,7 +107,7 @@
                     <div class="col-lg-6 col-sm-6 col-xs-6 border border-top-0 border-left-0 border-bottom-0">
                         <div class="footer__widget">
 
-                            <p class="mb-1 mt-4">Mlm companies in: </p>
+                            <p class="mb-1 mt-4">CarGurus used cars in: </p>
                             <ul>
 
                                 <?php
@@ -154,7 +154,7 @@
 
                         <div class="footer__widget">
 
-                            <p class="mb-1 mt-4">Multi level marketing in: </p>
+                            <p class="mb-1 mt-4">Autozone in: </p>
                             <ul>
 
                                 <?php

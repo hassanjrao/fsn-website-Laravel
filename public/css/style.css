@@ -530,6 +530,10 @@ ol {
   display: none;
 }
 
+.humberger__menu__wrapper a {
+  text-transform: capitalize;
+}
+
 .humberger__open {
   display: none;
 }
@@ -584,9 +588,8 @@ ol {
 }
 
 .hero__categories ul {
-  padding-left: 10px;
+  padding-left: 5px;
   padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 .hero__categories ul li {
@@ -594,9 +597,9 @@ ol {
 }
 
 .hero__categories ul li a {
-  font-size: 16px;
+  font-size: 13px;
   color: #1c1c1c;
-  line-height: 25px;
+  line-height: 22px;
   display: block;
   text-transform: capitalize;
   text-decoration: underline;
@@ -2301,6 +2304,10 @@ ol {
   border: 3px solid #cce5ff;
   z-index: 2;
   padding: 0px 16px;
+}
+
+.enquiry-btn:hover {
+  color: #cce5ff;
 }
 
 .tos-policy ul,
