@@ -110,9 +110,7 @@
     src="../../../admin-assets/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js">
 </script>
 
-<script
-    src="../../../admin-assets/assets/plugins/tinymce-variable-master/src/plugin.js">
-</script>
+
 <script src="https://cdn.tiny.cloud/1/rikps930c10cl6vxmoq7viyjr9bhgzs8ukeyn4y0080ytyf6/tinymce/5/tinymce.min.js"
     referrerpolicy="origin"></script>
 
@@ -120,12 +118,8 @@
     $(document).ready(function () {
 
         tinymce.init({
-            selector: 'textarea',
-            plugins: "variable",
-            variable_mapper: {
-                account_id: "Account ID",
-                email: "E-mail address"
-            }
+            selector: 'textarea'
+           
         });
 
     });

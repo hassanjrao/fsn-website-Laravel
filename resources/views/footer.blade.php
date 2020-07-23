@@ -37,7 +37,7 @@
                                     $ct = strtolower(preg_replace('/\s+/', '-', $city));
 
                                 ?>
-                                    <li class=""><a href="{{ route("car-gurus-cities","$ct") }}"><?php echo ucwords($city) ?></a>
+                                    <li><a href="#"><?php echo ucwords($city) ?></a>
                                     </li>
 
                                 <?php
@@ -87,7 +87,7 @@
                                     $ct = strtolower(preg_replace('/\s+/', '-', $city));
 
                                 ?>
-                                    <li><a href="{{ route("network-marketing-cities",$ct) }}"><?php echo ucwords($city); ?></a>
+                                    <li><a href="{{ route("car-gurus-cities","$ct") }}"><?php echo ucwords($city); ?></a>
                                     </li>
 
                                 <?php }
@@ -137,7 +137,7 @@
                                     $ct = strtolower(preg_replace('/\s+/', '-', $city));
 
                                 ?>
-                                    <li><a href="{{route("mlm-companies-cities","$ct")}}"><?php echo ucwords($city); ?></a>
+                                    <li><a href="{{route("car-gurus-used-cars-cities","$ct")}}"><?php echo ucwords($city); ?></a>
                                     </li>
 
                                 <?php }
