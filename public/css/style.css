@@ -411,6 +411,7 @@ ol {
 
 .header__menu {
   padding: 24px 0;
+  padding-left: 13%;
 }
 
 .header__menu ul li {
@@ -425,7 +426,7 @@ ol {
   left: 0;
   top: 50px;
   background: #002868;
-  width: 180px;
+  width: 250px;
   z-index: 9;
   padding: 5px 0;
   transition: all, 0.3s;
@@ -438,8 +439,8 @@ ol {
   display: block;
 }
 
-.header__menu ul li .header__menu__dropdown li:hover > a {
-  font-weight: bolder;
+.header__menu ul li .header__menu__dropdown li:hover {
+  background-color: red;
 }
 
 .header__menu ul li .header__menu__dropdown li a {
@@ -2308,6 +2309,20 @@ ol {
 
 .enquiry-btn:hover {
   color: #cce5ff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .tos-policy ul,

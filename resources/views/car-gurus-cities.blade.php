@@ -1,10 +1,16 @@
 @extends('layouts.master')
 
+
+@section('title')
+    CarGurus in {{$infos->first()->city }}
+@endsection
+
+
 @section('links')
 <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" defer type="text/javascript" charset="utf-8"></script>
 <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" defer type="text/javascript" charset="utf-8"></script>
-
 @endsection
+
 
 @section('onload')
 onload="getMap()"
@@ -20,8 +26,7 @@ onload="getMap()"
             <div class="row">
                 <div class="col-lg-12">
 
-                    {{-- {{$infos->first()->$city }} --}}
-
+                   
                     {{-- {{ $infos->first()->city }} --}}
 
 
