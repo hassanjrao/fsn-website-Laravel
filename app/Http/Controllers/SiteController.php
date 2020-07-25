@@ -23,12 +23,14 @@ class SiteController extends Controller
 
     public function __construct()
     {
+        
         $this->cities=Footer::footer();
     
     }
     
     public function index()
-    {    
+    {
+
         return view('welcome', ["ctis" => $this->cities]);
     }
 
@@ -153,15 +155,15 @@ class SiteController extends Controller
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "cars for sale")->get();
 
-        return view("car-gurus-cities", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content]);
+        return view("car-gurus", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content]);
     }
     public function carGurusCities($ct)
     {
         $city = strtolower(preg_replace('/-/', ' ', $ct)); 
         $city_info = City::where("city", $city)->get();
-        $content = Content::where("page", "cargurus")->get();
+        $content = Content::where("page", "cargurus city")->get();
 
-        return view("car-gurus-cities", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content]);
+        return view("cities-pages.car-gurus-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content]);
     }
     public function carGurusUsedCarsCities($ct)
     {

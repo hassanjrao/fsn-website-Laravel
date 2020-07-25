@@ -43,7 +43,7 @@
                                         @csrf
 
                                         <select name="page" id="page" class="form-control">
-                                            <option selected disabled>{{ $content->page }}</option>
+                                            <option value="{{ $content->page }}" selected>{{ $content->page }}</option>
                                             <option value="cars for sale">Cars For Sale</option>
                                             <option value="cargurus">Cargurus</option>
                                             <option value="cargurus used cars">Cargurus Used Cars</option>
@@ -68,10 +68,25 @@
 
                                         </select>
 
+                                        <br><br>
+                                       @if ($content->heading!=null)
+                                           <input type="text" class="form-control" placeholder="Heading" value="{{$content->heading}}" name="heading">
+                                       @endif
+
+                                       <br>
+
                                         <div class="form-group">
                                             <textarea id="content" rows="15" name="content" class="form-control"
                                                 placeholder="Content">{!! $content->content !!}</textarea>
                                         </div>
+
+                                        <br>
+                                        @if ($content->content_third!=null)
+                                        <div class="form-group">
+                                            <textarea id="content" rows="15" name="content-third" class="form-control"
+                                                placeholder="Content Third">{!! $content->content_third !!}</textarea>
+                                        </div>
+                                        @endif
 
                                      
                                         <button name="submit1" type="submit" style="float: right;"
@@ -112,7 +127,7 @@
     $(document).ready(function () {
 
         tinymce.init({
-            selector: '#content',
+            selector: 'textarea',
 
            
         });

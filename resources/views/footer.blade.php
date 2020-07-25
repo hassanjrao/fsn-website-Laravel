@@ -87,7 +87,7 @@
                                     $ct = strtolower(preg_replace('/\s+/', '-', $city));
 
                                 ?>
-                                    <li><a href="{{ route("car-gurus-cities","$ct") }}"><?php echo ucwords($city); ?></a>
+                                    <li><a href="{{ route("car-gurus-city","$ct") }}"><?php echo ucwords($city); ?></a>
                                     </li>
 
                                 <?php }

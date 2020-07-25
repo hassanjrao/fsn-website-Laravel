@@ -46,37 +46,69 @@
                                             <select name="page" id="page" class="form-control">
 
                                                 <option disabled selected>Select Page</option>
-                                                <option value="cars for sale">Cars For Sale</option>
-                                                <option value="cargurus">Cargurus</option>
-                                                <option value="cargurus used cars">Cargurus Used Cars</option>
-                                                <option value="autozone">Autozone</option>
-                                                <option value="autotrader">Autotrader</option>
-                                                <option value="trulia">Trulia</option>
-                                                <option value="autozone near me">Autozone Near Me</option>
-                                                <option value="used cars">Used Cars</option>
-                                                <option value="used cars for sale">Used Cars For Sale</option>
-                                                <option value="used cars for sale near me">Used Cars For Sale Near Me
+                                                <option class="non-city" value="cars for sale">Cars For Sale</option>
+                                                <option class="non-city" value="cargurus">Cargurus</option>
+                                                <option class="non-city" value="cargurus used cars">Cargurus Used Cars</option>
+                                                <option class="non-city" value="autozone">Autozone</option>
+                                                <option class="non-city" value="autotrader">Autotrader</option>
+                                                <option class="non-city" value="trulia">Trulia</option>
+                                                <option class="non-city" value="autozone near me">Autozone Near Me</option>
+                                                <option class="non-city" value="used cars">Used Cars</option>
+                                                <option class="non-city" value="used cars for sale">Used Cars For Sale</option>
+                                                <option class="non-city" value="used cars for sale near me">Used Cars For Sale Near Me
                                                 </option>
-                                                <option value="homes">Homes</option>
-                                                <option value="house for sale">House For Sale</option>
-                                                <option value="homes for sale">Homes For Sale</option>
-                                                <option value="house for sale near me">House For sale Near Me</option>
-                                                <option value="homes for sale near me">Homes For sale Near Me</option>
-                                                <option value="car for sale near me">Car For Sale Near Me</option>
-                                                <option value="motorcycle sale">Motorcycle Sale</option>
-                                                <option value="classic cars for sale">Classic Cars For Sale</option>
-                                                <option value="bikes shop">Bikes Shop</option>
-                                                <option value="bikes shop near me">Bikes Shop Near Me</option>
+                                                <option class="non-city" value="homes">Homes</option>
+                                                <option class="non-city" value="house for sale">House For Sale</option>
+                                                <option class="non-city" value="homes for sale">Homes For Sale</option>
+                                                <option class="non-city" value="house for sale near me">House For sale Near Me</option>
+                                                <option class="non-city" value="homes for sale near me">Homes For sale Near Me</option>
+                                                <option class="non-city" value="car for sale near me">Car For Sale Near Me</option>
+                                                <option class="non-city" value="motorcycle sale">Motorcycle Sale</option>
+                                                <option class="non-city" value="classic cars for sale">Classic Cars For Sale</option>
+                                                <option class="non-city" value="bikes shop">Bikes Shop</option>
+                                                <option class="non-city" value="bikes shop near me">Bikes Shop Near Me</option>
+
+                                                <option disabled>-------------------------------------------------------</option>
+
+
+                                                <option class="city-page" value="cars for sale city">Cars For Sale - City</option>
+                                                <option class="city-page" value="cargurus city">Cargurus - City</option>
+                                                <option class="city-page" value="cargurus used cars city">Cargurus Used Cars - City</option>
+                                                <option class="city-page" value="autozone city">Autozone - City</option>
+                                                <option class="city-page" value="autotrader city">Autotrader - City</option>
+                                                <option class="city-page" value="trulia city">Trulia - City</option>
+                                                <option class="city-page" value="autozone near me city">Autozone Near Me - City</option>
+                                                <option class="city-page" value="used cars city">Used Cars - City</option>
+                                                <option class="city-page" value="used cars for sale city">Used Cars For Sale - City</option>
+                                                <option class="city-page" value="used cars for sale near me city">Used Cars For Sale Near Me - City
+                                                </option>
+                                                <option class="city-page" value="homes city">Homes - City</option>
+                                                <option class="city-page" value="house for sale city">House For Sale - City</option>
+                                                <option class="city-page" value="homes for sale city">Homes For Sale - City</option>
+                                                <option class="city-page" value="house for sale near me city">House For sale Near Me - City</option>
+                                                <option class="city-page" value="homes for sale near me city">Homes For sale Near Me - City</option>
+                                                <option class="city-page" value="car for sale near me city">Car For Sale Near Me - City</option>
+                                                <option class="city-page" value="motorcycle sale city">Motorcycle Sale - City</option>
+                                                <option class="city-page" value="classic cars for sale city">Classic Cars For Sale - City</option>
+                                                <option class="city-page" value="bikes shop city">Bikes Shop - City</option>
+                                                <option class="city-page" value="bikes shop near me city">Bikes Shop Near Me - City</option>
 
 
                                             </select>
                                         </div>
 
                                         <br>
-
+                                        <input type="text" name="heading" placeholder="Heading H1" class="form-control heading" style="display: none">
+                                        <br>
                                         <div class="form-group">
                                             <textarea rows="15" name="content" class="form-control"
-                                                placeholder="Body"></textarea>
+                                                placeholder="Content one"></textarea>
+                                        </div>
+                                        <br>
+
+                                        <div class="form-group content-third" style="display: none">
+                                            <textarea rows="15" name="content-third" class="form-control"
+                                                placeholder="Content third"></textarea>
                                         </div>
 
                                         <button name="submit" type="submit" style="float: right;"
@@ -120,6 +152,15 @@
         tinymce.init({
             selector: 'textarea'
            
+        });
+
+        $(".non-city").click(function(){
+            $(".content-third").hide();
+            $(".heading").hide();
+        });
+        $(".city-page").click(function(){
+            $(".content-third").show();
+            $(".heading").show();
         });
 
     });

@@ -63,7 +63,7 @@ Route::get("/classic-cars-for-sale","SiteController@classicCarsForSale")->name("
 
 // cities pages routes starts
 Route::get('/cars-for-sale-in-{city}', "SiteController@carsForSaleCities")->name("cars-for-sale-cities");
-Route::get('/cargurus-in-{city}', "SiteController@carGurusCities")->name("car-gurus-cities");
+Route::get('/cargurus-in-{city}', "SiteController@carGurusCities")->name("car-gurus-city");
 Route::get('/car-gurus-used-cars-in-{city}', "SiteController@carGurusUsedCarsCities")->name("car-gurus-used-cars-cities");
 // cities pages routes ends
 
