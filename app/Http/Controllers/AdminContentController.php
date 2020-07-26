@@ -60,13 +60,22 @@ class AdminContentController extends Controller
         return view("admin.content.show", ["content" => $content]);
     }
 
-    public function update($id)
+    public function update($id, Request $request)
     {
         $page = request("page");
         $content = request("content");
-        $city = request("city");
 
-        Content::where("id", $id)->update(["page" => $page, "content" => $content]);
+        $heading=null;
+        $content_third=null;
+
+        if ($request->has("heading")) {
+            $heading = request("heading");
+        }
+        if ($request->has("content-third")) {
+            $content_third = request("content-third");
+        }
+
+        Content::where("id", $id)->update(["page" => $page ,"content" => $content, "heading"=>$heading, "content_third"=>$content_third]);
 
         return redirect("/admin/content/");
     }

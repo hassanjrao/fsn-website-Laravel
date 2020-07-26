@@ -2325,6 +2325,18 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.servc-links {
+  margin-left: 98px;
+}
+
+.servc-links a {
+  color: #002868;
+}
+
+.servc-links a:hover {
+  text-decoration: underline;
+}
+
 .tos-policy ul,
 .tos-policy ol {
   margin-left: 56px;

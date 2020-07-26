@@ -31,3 +31,14 @@ input[type=number] {
 }
 
 
+.servc-links{
+  margin-left: 98px;
+  a{
+    color:$primary-color;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+

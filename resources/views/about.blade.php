@@ -10,7 +10,10 @@ About
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Blogs</h2>
+                <section>
+                    {!!$content->first()->content ?? "" !!}
+                </section>
+               
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 
 @section('title')
-CarGurus in {{ $infos->first()->city }}
+Car For Sale Near Me in {{ $infos->first()->city }}
 @endsection
 
 
@@ -29,16 +29,17 @@ onload="getMap()"
 
 
                     @if($content->first()!=null)
-                    @php
-                        $h1= str_replace("Vcity$", $infos->first()->city
-                        ,$content->first()->heading);
+                        @php
+                            $h1= str_replace("Vcity$", $infos->first()->city
+                            ,$content->first()->heading);
 
-                    @endphp
-                     <h1>{{$h1}}</h1>
 
-                @endif
+                        @endphp
+                        <h1>{{ $h1 }}</h1>
 
-                   
+                    @endif
+
+
 
                     {{-- content 1 starts --}}
 
@@ -82,7 +83,7 @@ onload="getMap()"
                                 $contentOne= str_replace("Vcity$", $infos->first()->city ,$content->first()->content);
                             @endphp
 
-                            {!! $contentOne !!}
+                            {!! $contentOne!!}
                         @endif
 
                     </section>

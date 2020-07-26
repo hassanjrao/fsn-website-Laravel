@@ -62,9 +62,27 @@ Route::get("/classic-cars-for-sale","SiteController@classicCarsForSale")->name("
 
 
 // cities pages routes starts
-Route::get('/cars-for-sale-in-{city}', "SiteController@carsForSaleCities")->name("cars-for-sale-cities");
-Route::get('/cargurus-in-{city}', "SiteController@carGurusCities")->name("car-gurus-city");
-Route::get('/car-gurus-used-cars-in-{city}', "SiteController@carGurusUsedCarsCities")->name("car-gurus-used-cars-cities");
+Route::get('/cars-for-sale-in-{city}', "SiteController@carsForSaleCity")->name("cars-for-sale-city");
+Route::get('/cargurus-in-{city}', "SiteController@carGurusCity")->name("car-gurus-city");
+Route::get('/car-gurus-used-cars-in-{city}', "SiteController@carGurusUsedCarsCity")->name("car-gurus-used-cars-city");
+Route::get('/autozone-in-{city}', "SiteController@autozoneCity")->name("autozone-city");
+Route::get('/autotrader-in-{city}', "SiteController@autotraderCity")->name("autotrader-city");
+Route::get('/autozone-near-me-in-{city}', "SiteController@autozoneNearMeCity")->name("autozone-near-me-city");
+Route::get('/bikes-shop-near-me-in-{city}', "SiteController@bikesShopNearMeCity")->name("bikes-shop-near-me-city");
+Route::get('/bikes-shop-in-{city}', "SiteController@bikesShopCity")->name("bikes-shop-city");
+Route::get('/car-for-sale-near-me-{city}', "SiteController@carForSaleNearMeCity")->name("car-for-sale-near-me-city");
+Route::get('/classic-cars-for-sale-{city}', "SiteController@classicCarsForSaleCity")->name("classic-cars-for-sale-city");
+Route::get('/homes-for-sale-near-me-{city}', "SiteController@homesForSaleNearMeCity")->name("homes-for-sale-near-me-city");
+Route::get('/homes-for-sale-{city}', "SiteController@homesForSaleCity")->name("homes-for-sale-city");
+Route::get('/homes-{city}', "SiteController@homesCity")->name("homes-city");
+Route::get('/house-for-sale-near-me-{city}', "SiteController@houseForSaleNearMeCity")->name("house-for-sale-near-me-city");
+Route::get('/house-for-sale-{city}', "SiteController@houseForSaleCity")->name("house-for-sale-city");
+Route::get('/motorcycle-sale-{city}', "SiteController@motorcycleSaleCity")->name("motorcycle-sale-city");
+Route::get('/trulia-{city}', "SiteController@truliaCity")->name("trulia-city");
+Route::get('/used-cars-for-sale-near-me-{city}', "SiteController@usedCarsForSaleNearMeCity")->name("used-cars-for-sale-near-me-city");
+Route::get('/used-cars-for-sale-{city}', "SiteController@usedCarsForSaleCity")->name("used-cars-for-sale-city");
+Route::get('/used-cars-{city}', "SiteController@usedCarsCity")->name("used-cars-city");
+
 // cities pages routes ends
 
 

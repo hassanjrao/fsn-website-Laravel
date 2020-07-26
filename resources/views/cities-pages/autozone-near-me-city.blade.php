@@ -2,7 +2,7 @@
 
 
 @section('title')
-CarGurus in {{ $infos->first()->city }}
+Autozone near me in {{ $infos->first()->city }}
 @endsection
 
 

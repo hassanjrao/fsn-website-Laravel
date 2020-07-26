@@ -2,7 +2,7 @@
 
 
 @section('title')
-CarGurus in {{ $infos->first()->city }}
+Used Cars in {{ $infos->first()->city }}
 @endsection
 
 

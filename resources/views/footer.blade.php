@@ -37,8 +37,9 @@
                                     $ct = strtolower(preg_replace('/\s+/', '-', $city));
 
                                 ?>
-                                    <li><a href="#"><?php echo ucwords($city) ?></a>
-                                    </li>
+                                <li><a
+                                        href="{{ route("cars-for-sale-city","$ct") }}"><?php echo ucwords($city) ?></a>
+                                </li>
 
                                 <?php
                                 }
@@ -87,8 +88,9 @@
                                     $ct = strtolower(preg_replace('/\s+/', '-', $city));
 
                                 ?>
-                                    <li><a href="{{ route("car-gurus-city","$ct") }}"><?php echo ucwords($city); ?></a>
-                                    </li>
+                                <li><a
+                                        href="{{ route("car-gurus-city","$ct") }}"><?php echo ucwords($city); ?></a>
+                                </li>
 
                                 <?php }
 
@@ -137,8 +139,9 @@
                                     $ct = strtolower(preg_replace('/\s+/', '-', $city));
 
                                 ?>
-                                    <li><a href="{{route("car-gurus-used-cars-cities","$ct")}}"><?php echo ucwords($city); ?></a>
-                                    </li>
+                                <li><a
+                                        href="{{ route("car-gurus-used-cars-city","$ct") }}"><?php echo ucwords($city); ?></a>
+                                </li>
 
                                 <?php }
 
@@ -181,28 +184,33 @@
                                     $z++;
 
 
+                                    $ct = strtolower(preg_replace('/\s+/', '-', $city));
 
                                 ?>
-                                    <li class=""><a href="#"><?php echo ucwords($city) ?></a></li>
-
+                                <li><a
+                                        href="{{ route("autozone-city","$ct") }}"><?php echo ucwords($city); ?></a>
+                                </li>
 
                                 <?php }
+
+                                
+
 
                                 $left = array_diff($cities, $done_cities);
 
                                 $leftCities = array_values($left);
 
-
+                                
 
                                 $totalLeftCities = count($leftCities);
 
                                 for ($x = 0; $x < $totalLeftCities; $x++) {
 
                                     $city = $leftCities[$x];
+                         
                                     $ct = preg_replace('/\s+/', '-', $city);
+                                    
                                 }
-
-                                
 
 
                                 ?>
@@ -212,6 +220,7 @@
 
 
                     </div>
+
 
 
                 </div>
@@ -243,19 +252,25 @@
                 <div class="footer__about">
                     <form id="captcha-form">
                         <input id="f-name" type="text" class="form-control" placeholder="Name" name="name" required="">
-                        <input id="f-email" type="email" class="form-control" placeholder="Email" name="email" required="">
-                        <input id="f-mob" type="number" class="form-control" placeholder="Mobile" name="mobile" required="">
+                        <input id="f-email" type="email" class="form-control" placeholder="Email" name="email"
+                            required="">
+                        <input id="f-mob" type="number" class="form-control" placeholder="Mobile" name="mobile"
+                            required="">
                         <input id="f-city" type="text" class="form-control" placeholder="City" name="city" required="">
-                        <input id="f-sub" type="text" class="form-control" placeholder="Subject" name="subject" required="">
-                        <textarea id="f-comm" class="form-control" placeholder="Comment" name="comment" required=""></textarea>
+                        <input id="f-sub" type="text" class="form-control" placeholder="Subject" name="subject"
+                            required="">
+                        <textarea id="f-comm" class="form-control" placeholder="Comment" name="comment"
+                            required=""></textarea>
 
 
-                        <div class="g-recaptcha" data-sitekey="6Lc9cK4ZAAAAAL9lf7JyxcIrmhVOxr8eAB8-8ljg" data-callback="enable_submit_btn" data-expired-callback="disable_submit_btn"></div>
+                        <div class="g-recaptcha" data-sitekey="6Lc9cK4ZAAAAAL9lf7JyxcIrmhVOxr8eAB8-8ljg"
+                            data-callback="enable_submit_btn" data-expired-callback="disable_submit_btn"></div>
 
                         <br>
 
                         <div id="success-f"> </div>
-                        <button type="button" disabled="disabled" id="enquiry-submit-f" name="submit" class="btn mt-1">Submit</button>
+                        <button type="button" disabled="disabled" id="enquiry-submit-f" name="submit"
+                            class="btn mt-1">Submit</button>
 
                     </form>
                 </div>
@@ -309,4 +324,5 @@
         document.getElementById("enquiry-submit-f").disabled = true;
 
     };
+
 </script>
