@@ -46,6 +46,12 @@
                                             <select name="page" id="page" class="form-control">
 
                                                 <option disabled selected>Select Page</option>
+
+                                                <option class="non-city" value="about">About</option>
+                                                <option class="non-city" value="disclaimer">Disclaimer</option>
+                                                <option class="non-city" value="tos">TOS</option>
+                                                <option class="non-city" value="privacy policy">Privacy Policy</option>
+
                                                 <option class="non-city" value="cars for sale">Cars For Sale</option>
                                                 <option class="non-city" value="cargurus">Cargurus</option>
                                                 <option class="non-city" value="cargurus used cars">Cargurus Used Cars</option>
@@ -67,6 +73,7 @@
                                                 <option class="non-city" value="classic cars for sale">Classic Cars For Sale</option>
                                                 <option class="non-city" value="bikes shop">Bikes Shop</option>
                                                 <option class="non-city" value="bikes shop near me">Bikes Shop Near Me</option>
+
 
                                                 <option disabled>-------------------------------------------------------</option>
 

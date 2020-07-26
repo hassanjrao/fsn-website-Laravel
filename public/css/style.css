@@ -1271,31 +1271,17 @@ ol {
 .blog__item__text .blog__btn {
   display: inline-block;
   font-size: 14px;
-  color: #1c1c1c;
+  color: #ffffff;
+  background-color: #002868;
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 1px solid #b2b2b2;
   padding: 14px 20px 12px;
   border-radius: 25px;
-}
-
-.blog__item__text .blog__btn span {
-  position: relative;
-  top: 1px;
-  margin-left: 5px;
-}
-
-.pagination li {
-  cursor: pointer;
-}
-
-.pagination a {
-  color: #002868;
   font-weight: 600;
 }
 
-.pagination a:hover {
-  color: #002868;
+.blog__item__text .blog__btn:hover {
   font-weight: bolder;
 }
 

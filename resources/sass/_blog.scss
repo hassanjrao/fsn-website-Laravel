@@ -48,31 +48,19 @@
   .blog__btn {
     display: inline-block;
     font-size: 14px;
-    color: $normal-color;
+    color: $white-color;
+    background-color: $primary-color;
     text-transform: uppercase;
     letter-spacing: 1px;
     border: 1px solid #b2b2b2;
     padding: 14px 20px 12px;
     border-radius: 25px;
+     font-weight: 600;
 
-    span {
-      position: relative;
-      top: 1px;
-      margin-left: 5px;
+    &:hover{
+      font-weight: bolder;
     }
+    
   }
 }
 
-.pagination {
-  li {
-    cursor: pointer;
-  }
-  a {
-    color: $primary-color;
-    font-weight: 600;
-  }
-  a:hover {
-    color: $primary-color;
-    font-weight: bolder;
-  }
-}

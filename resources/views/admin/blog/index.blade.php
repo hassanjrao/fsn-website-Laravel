@@ -68,7 +68,22 @@
                                                             <p class="c_name">{{ $blog->title }}</p>
                                                         </td>
                                                         <td>
-                                                            <p class="c_name">{{ $blog->body }}</p>
+
+                                                            <?php
+                                                                
+                                                                $bdy="";
+
+                                                                if(strlen(strip_tags($blog->body))>70){
+                                                                    $bdy=substr(strip_tags($blog->body),0,70).".........................";
+                                                                }
+                                                                else{
+                                                                    $bdy=$blog->body;
+                                                                }
+
+                                                            ?>
+                                                           
+                                                            
+                                                            <p class="c_name"> {!! $bdy !!} </p>
                                                         </td>
                                                         <td>
                                                             <p class="c_name">{{ $blog->caption }}</p>

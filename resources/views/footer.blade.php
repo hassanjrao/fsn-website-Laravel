@@ -285,14 +285,14 @@
 
             <div class="col-lg-4 col-md-4 my-auto">
                 <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
-                    <img src="images/logo.png" alt="logo" width="150px" height="50px"></a>
+                    <img src="{{asset('images/logo.png')}}" alt="logo" width="150px" height="50px"></a>
             </div>
 
             <div class="col-lg-4 col-md-4 text-center my-auto">
                 <div class="footer__pages">
-                    <a href="disclaimer.php">Disclaimer</a>
-                    <a href="TOS.php">TOS</a>
-                    <a href="privacy-policy.php">Privacy Policy</a>
+                    <a href="{{ route("disclaimer") }}">Disclaimer</a>
+                    <a href="{{ route("tos") }}">TOS</a>
+                    <a href="{{ route("privacy-policy") }}">Privacy Policy</a>
                 </div>
             </div>
 

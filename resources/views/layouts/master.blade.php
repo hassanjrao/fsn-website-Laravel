@@ -15,17 +15,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme3.css" />
+    
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/nice-select.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/jquery-ui.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/slicknav.min.css')}}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('slick/slick.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('slick/slick-theme3.css')}}" />
 
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -54,7 +54,7 @@
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
             <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
-                <img src="images/logo.png" alt="logo"></a>
+                <img src="{{asset('images/logo.png')}}" alt="logo"></a>
         </div>
 
 
@@ -141,8 +141,8 @@
 
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
-                            <img src="images/logo.png" alt="logo" width="150px" height="50px"></a>
+                        <a href="{{route('/')}}" style="font-size:x-large; font-style:bolder; color:black;">
+                            <img src="{{asset('images/logo.png')}}" alt="logo" width="150px" height="50px"></a>
                     </div>
                 </div>
 
@@ -319,8 +319,8 @@
 
                     <div class="slider23 ">
 
-                        <img src="images/banner/MLM1.jpg" width="100%" height="400px">
-                        <img src="images/banner/MLM2.jpg" width="100%" height="400px">
+                        <img src="{{asset('images/banner/MLM1.jpg')}}" width="100%" height="400px">
+                        <img src="{{asset('images/banner/MLM2.jpg')}}" width="100%" height="400px">
 
                     </div>
 
@@ -400,14 +400,14 @@
 
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js" defer></script>
-    <script src="js/bootstrap.min.js" defer></script>
-    <script src="js/jquery.nice-select.min.js" defer></script>
-    <script src="js/jquery.slicknav.js" defer></script>
-    <script src="js/mixitup.min.js" defer></script>
-    <script src="js/owl.carousel.min.js" defer></script>
-    <script type="text/javascript" src="slick/slick.min.js" defer></script>
-    <script src="js/main11.js" defer></script>
+    <script src="{{asset('js/jquery-3.3.1.min.js')}}" defer></script>
+    <script src="{{asset('js/bootstrap.min.js')}}" defer></script>
+    <script src="{{asset('js/jquery.nice-select.min.js')}}" defer></script>
+    <script src="{{asset('js/jquery.slicknav.js')}}" defer></script>
+    <script src="{{asset('js/mixitup.min.js')}}" defer></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}" defer></script>
+    <script type="text/javascript" src="{{asset('slick/slick.min.js')}}" defer></script>
+    <script src="{{asset('js/main11.js')}}" defer></script>
 
     <script type="text/javascript">
         function enable_submit_btn_l() {

@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Blog;
 use Illuminate\Support\Facades\Storage;
 
+
 class AdminBlogController extends Controller
 {
     public function index()
     {
         $blogs = Blog::all();
+
         return view("admin.blog.index", ["blogs" => $blogs]);
     }
 

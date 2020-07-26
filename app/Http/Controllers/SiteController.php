@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\City;
 use App\Content;
+use App\Blog;
 
 class Footer
 {
@@ -40,12 +41,32 @@ class SiteController extends Controller
         $content = Content::where("page", "about")->get();
         return view("about",["ctis"=>$this->cities,"content"=>$content]);
     }
-
+    public function disclaimer()
+    {
+        $content = Content::where("page", "disclaimer")->get();
+        return view("disclaimer",["ctis"=>$this->cities,"content"=>$content]);
+    }
+    public function tos()
+    {
+        $content = Content::where("page", "tos")->get();
+        return view("tos",["ctis"=>$this->cities,"content"=>$content]);
+    }
+    public function privacyPolicy()
+    {
+        $content = Content::where("page", "privacy policy")->get();
+        return view("privacy-policy",["ctis"=>$this->cities,"content"=>$content]);
+    }
     public function blogs()
     {
-        $content = Content::where("page", "blogs")->get();
-        return view("blog-list",["ctis"=>$this->cities,"content"=>$content]);
-    }  
+        $blogs=blog::paginate(10);
+        return view("blog-list",["ctis"=>$this->cities,"blogs"=>$blogs]);
+    }
+    public function blog($title,$id)
+    {
+        $blog=blog::findorfail($id);
+        return view("blog-details",["ctis"=>$this->cities,"blog"=>$blog]);
+    }
+
     //  Home ends
 
 

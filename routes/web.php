@@ -20,7 +20,11 @@ Route::get('/', "SiteController@index")->name("/");
 
 // Home starts
 Route::get("/about","SiteController@about")->name("about");
+Route::get("/disclaimer","SiteController@disclaimer")->name("disclaimer");
+Route::get("/tos","SiteController@tos")->name("tos");
+Route::get("/privacy-policy","SiteController@privacyPolicy")->name("privacy-policy");
 Route::get("/blogs","SiteController@blogs")->name("blog-list");
+Route::get("/blog/{title}/{id}","SiteController@blog")->name("blog");
 // Home ends
 
 

@@ -47,7 +47,7 @@
 
                                         <div class="form-group">
                                             <textarea id="body" rows="15" name="body" class="form-control"
-                                                placeholder="Body"> {{$blog->body}} </textarea>
+                                                placeholder="Body"> {!! $blog->body !!} </textarea>
                                         </div>
 
                                         <div class="form-group">

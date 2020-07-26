@@ -33,7 +33,7 @@
                             <div class="row clearfix">
                                 <div class="col-sm-12">
 
-                                
+
 
 
                                     <form
@@ -43,7 +43,15 @@
                                         @csrf
 
                                         <select name="page" id="page" class="form-control">
-                                            <option value="{{ $content->page }}" selected>{{ $content->page }}</option>
+                                            <option value="{{ $content->page }}" selected>{{ $content->page }}
+                                            </option>
+
+                                            <option value="about">About</option>
+                                            <option value="disclaimer">Disclaimer</option>
+                                            <option value="tos">TOS</option>
+                                            <option value="privacy policy">Privacy Policy</option>
+
+
                                             <option value="cars for sale">Cars For Sale</option>
                                             <option value="cargurus">Cargurus</option>
                                             <option value="cargurus used cars">Cargurus Used Cars</option>
@@ -66,14 +74,56 @@
                                             <option value="bikes shop">Bikes Shop</option>
                                             <option value="bikes shop near me">Bikes Shop Near Me</option>
 
+                                            
+                                            <option disabled>-------------------------------------------------------
+                                            </option>
+
+
+                                            <option class="city-page" value="cars for sale city">Cars For Sale - City
+                                            </option>
+                                            <option class="city-page" value="cargurus city">Cargurus - City</option>
+                                            <option class="city-page" value="cargurus used cars city">Cargurus Used Cars
+                                                - City</option>
+                                            <option class="city-page" value="autozone city">Autozone - City</option>
+                                            <option class="city-page" value="autotrader city">Autotrader - City</option>
+                                            <option class="city-page" value="trulia city">Trulia - City</option>
+                                            <option class="city-page" value="autozone near me city">Autozone Near Me -
+                                                City</option>
+                                            <option class="city-page" value="used cars city">Used Cars - City</option>
+                                            <option class="city-page" value="used cars for sale city">Used Cars For Sale
+                                                - City</option>
+                                            <option class="city-page" value="used cars for sale near me city">Used Cars
+                                                For Sale Near Me - City
+                                            </option>
+                                            <option class="city-page" value="homes city">Homes - City</option>
+                                            <option class="city-page" value="house for sale city">House For Sale - City
+                                            </option>
+                                            <option class="city-page" value="homes for sale city">Homes For Sale - City
+                                            </option>
+                                            <option class="city-page" value="house for sale near me city">House For sale
+                                                Near Me - City</option>
+                                            <option class="city-page" value="homes for sale near me city">Homes For sale
+                                                Near Me - City</option>
+                                            <option class="city-page" value="car for sale near me city">Car For Sale
+                                                Near Me - City</option>
+                                            <option class="city-page" value="motorcycle sale city">Motorcycle Sale -
+                                                City</option>
+                                            <option class="city-page" value="classic cars for sale city">Classic Cars
+                                                For Sale - City</option>
+                                            <option class="city-page" value="bikes shop city">Bikes Shop - City</option>
+                                            <option class="city-page" value="bikes shop near me city">Bikes Shop Near Me
+                                                - City</option>
+
+
                                         </select>
 
                                         <br><br>
-                                       @if ($content->heading!=null)
-                                           <input type="text" class="form-control" placeholder="Heading" value="{{$content->heading}}" name="heading">
-                                       @endif
+                                        @if($content->heading!=null)
+                                            <input type="text" class="form-control" placeholder="Heading"
+                                                value="{{ $content->heading }}" name="heading">
+                                        @endif
 
-                                       <br>
+                                        <br>
 
                                         <div class="form-group">
                                             <textarea id="content" rows="15" name="content" class="form-control"
@@ -81,14 +131,15 @@
                                         </div>
 
                                         <br>
-                                        @if ($content->content_third!=null)
-                                        <div class="form-group">
-                                            <textarea id="content" rows="15" name="content-third" class="form-control"
-                                                placeholder="Content Third">{!! $content->content_third !!}</textarea>
-                                        </div>
+                                        @if($content->content_third!=null)
+                                            <div class="form-group">
+                                                <textarea id="content" rows="15" name="content-third"
+                                                    class="form-control"
+                                                    placeholder="Content Third">{!! $content->content_third !!}</textarea>
+                                            </div>
                                         @endif
 
-                                     
+
                                         <button name="submit1" type="submit" style="float: right;"
                                             class="btn btn-success btn-sm">Submit</button>
                                     </form>
@@ -129,11 +180,11 @@
         tinymce.init({
             selector: 'textarea',
 
-           
+
         });
 
 
-     
+
 
     });
 

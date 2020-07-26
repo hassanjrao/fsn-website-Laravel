@@ -1,244 +1,94 @@
 @extends('layouts.master')
 
 @section('title')
-    Blogs
+Blogs
 @endsection
 
 @section('content')
 
-<section>
+
+<!-- Blog Section Begin -->
+<section class="blog spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <section>
-                    {!!$content->first()->content ?? "" !!}
-                </section>
-            </div>
-            <div class="col-lg-12 mb-5">
 
-                <div class="services-links">
+            <div class="col-lg-12 col-md-12">
+                <div class="row">
 
-                    <h3 class="text-center mb-4">MLM Services in</h3>
-
-                    <?php
-                    $cts = array();
-                    $z = 0;
-                    $done_cities = array();
-                    $cities=[];
-                    $ind=0;
+                    @foreach($blogs as $blog)
 
 
-                    foreach($ctis as $ct){
-                        $cities[$ind++]= $ct->city;
-                    }
+                    @php
+                        $tit= strtolower(preg_replace('/\s+/', '-', $blog->title));
+                    @endphp
 
-                    $totalCities = count($cities);
-
-
-                    $n = range(0, $totalCities - 1);
-                    shuffle($n);
-
-
-                    ?>
-
-                    <div class="row servc-links">
-
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-
-                            <ul>
-                                <?php
-
-                                for ($x = 0; $x < 5; $x++) {
-                                    $i = $n[$x];
-
-                                    $city = $cities[$i];
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item">
+                                <div class="blog__item__pic">
                                     
-
-                                    $done_cities[$z] = $city;
-                                    $z++;
-
-
-                                    $ct = preg_replace('/\s+/', '-', $city);
-                                    
-                                ?>
-                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a>
-                                </li>
+                                <a href="{{route("blog",["title"=>$tit,"id"=>$blog->id])}}"><img src="/storage/images/blog/{{$blog->image}}" alt="Blog Image"></a>
+                                </div>
+                                <div class="blog__item__text">
+                                <h5><a href="{{route("blog",["title"=>$tit,"id"=>$blog->id])}}">{{$blog->title}}</a></h5>
 
                                 <?php
+                                                                
+                                $capt="";
+
+                                if(strlen(strip_tags($blog->caption))>180){
+                                    $capt=substr(strip_tags($blog->caption),0,180)."..............";
+                                }
+                                else{
+                                    $capt=$blog->caption;
                                 }
 
+                            ?>
+                                   
 
-                                ?>
+                                    <p>{!! $capt !!}</p>
 
-
-                            </ul>
-
+                                     <a href="{{route("blog",["title"=>$tit,"id"=>$blog->id])}}" class="blog__btn"> READ MORE <i class="far fa-arrow-alt-circle-right"></i></a> 
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-
-                            <ul>
-
-                                <?php
-
-                                $left = array_diff($cities, $done_cities);
-                                $leftCities = array_values($left);
-
-                                
-
-                                $totalLeftCities = count($leftCities);
-
-                                $n = range(0, $totalLeftCities - 1);
-                                shuffle($n);
-
-                                for ($x = 0; $x < 5; $x++) {
-                                    $i = $n[$x];
-
-                                    $city = $leftCities[$i];
-                                    $done_cities[$z] = $city;
-
-                                    
-                                    $z++;
-
-                                    $ct = preg_replace('/\s+/', '-', $city);
-                                    
-                                ?>
-                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a>
-                                </li>
-
-
-                                <?php }
-                               
-                                ?>
-
-                            </ul>
-
-
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-
-                            <ul>
-
-                                <?php
-
-                                $left = array_diff($cities, $done_cities);
-
-                                $leftCities = array_values($left);
-
-                                
-
-                                $totalLeftCities = count($leftCities);
-
-                                $n = range(0, $totalLeftCities - 1);
-                                shuffle($n);
-
-                                for ($x = 0; $x < 5; $x++) {
-                                    $i = $n[$x];
-
-                                    $city = $leftCities[$i];
-                                    $done_cities[$z] = $city;
-
-
-                                    
-                                    $z++;
-
-
-                                    $ct = preg_replace('/\s+/', '-', $city);
-                                    
-                                ?>
-                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a>
-                                </li>
-
-                                <?php }
-                                
-                                ?>
-
-                            </ul>
-
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <ul>
-
-                                <?php
-
-                                $left = array_diff($cities, $done_cities);
-
-                                $leftCities = array_values($left);
-
-
-
-                                $totalLeftCities = count($leftCities);
-
-                                $n = range(0, $totalLeftCities - 1);
-                                shuffle($n);
-
-                                for ($x = 0; $x < 5; $x++) {
-                                    $i = $n[$x];
-
-                                    $city = $leftCities[$i];
-                                    $done_cities[$z] = $city;
-
-
-                                  
-                                    $z++;
-
-
-                                    $ct = preg_replace('/\s+/', '-', $city);
-                                  
-                                ?>
-                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a>
-                                </li>
-
-                                <?php }
-
-                                $left = array_diff($cities, $done_cities);
-
-                                $leftCities = array_values($left);
-
-                                $totalLeftCities = count($leftCities);
-
-                                $n = range(0, $totalLeftCities - 1);
-                                shuffle($n);
-                              
-                                ?>
-
-                            </ul>
-
-
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
-
             </div>
 
+            <div class="col-lg-12">
+
+               {{$blogs->links()}}
+            </div>
         </div>
     </div>
 </section>
-   
+<!-- Blog Section End -->
+
+
+
 @endsection
 
 
 @section('footer')
-    
+
 @php
 
-$cts = array();
-$z = 0;
-$done_cities = array();
-$cities=[];
-$ind=0;
+    $cts = array();
+    $z = 0;
+    $done_cities = array();
+    $cities=[];
+    $ind=0;
 
-foreach($ctis as $ct){
-$cities[$ind++]= $ct->city;
-}
+    foreach($ctis as $ct){
+    $cities[$ind++]= $ct->city;
+    }
 
-$totalCities = count($cities);
+    $totalCities = count($cities);
 
-$n = range(0, $totalCities - 1);
-shuffle($n);
+    $n = range(0, $totalCities - 1);
+    shuffle($n);
 
 @endphp
 
