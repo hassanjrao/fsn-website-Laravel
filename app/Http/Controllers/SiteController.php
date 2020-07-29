@@ -24,11 +24,14 @@ class SiteController extends Controller
 
     public function __construct()
     {
-        
-        $this->cities=Footer::footer();
-    
+
+        $this->cities = Footer::footer();
+        // require_once 'controllers/html_dom/simple_html_dom.php';
+
+
+
     }
-    
+
     public function index()
     {
 
@@ -39,32 +42,32 @@ class SiteController extends Controller
     public function about()
     {
         $content = Content::where("page", "about")->get();
-        return view("about",["ctis"=>$this->cities,"content"=>$content]);
+        return view("about", ["ctis" => $this->cities, "content" => $content]);
     }
     public function disclaimer()
     {
         $content = Content::where("page", "disclaimer")->get();
-        return view("disclaimer",["ctis"=>$this->cities,"content"=>$content]);
+        return view("disclaimer", ["ctis" => $this->cities, "content" => $content]);
     }
     public function tos()
     {
         $content = Content::where("page", "tos")->get();
-        return view("tos",["ctis"=>$this->cities,"content"=>$content]);
+        return view("tos", ["ctis" => $this->cities, "content" => $content]);
     }
     public function privacyPolicy()
     {
         $content = Content::where("page", "privacy policy")->get();
-        return view("privacy-policy",["ctis"=>$this->cities,"content"=>$content]);
+        return view("privacy-policy", ["ctis" => $this->cities, "content" => $content]);
     }
     public function blogs()
     {
-        $blogs=blog::paginate(10);
-        return view("blog-list",["ctis"=>$this->cities,"blogs"=>$blogs]);
+        $blogs = blog::paginate(10);
+        return view("blog-list", ["ctis" => $this->cities, "blogs" => $blogs]);
     }
-    public function blog($title,$id)
+    public function blog($title, $id)
     {
-        $blog=blog::findorfail($id);
-        return view("blog-details",["ctis"=>$this->cities,"blog"=>$blog]);
+        $blog = blog::findorfail($id);
+        return view("blog-details", ["ctis" => $this->cities, "blog" => $blog]);
     }
 
     //  Home ends
@@ -75,27 +78,27 @@ class SiteController extends Controller
     public function carGurus()
     {
         $content = Content::where("page", "cargurus")->get();
-        return view("car-gurus",["ctis"=>$this->cities,"content"=>$content]);   
+        return view("car-gurus", ["ctis" => $this->cities, "content" => $content]);
     }
     public function autozone()
     {
         $content = Content::where("page", "autozone")->get();
-        return view("autozone",["ctis"=>$this->cities,"content"=>$content]);
+        return view("autozone", ["ctis" => $this->cities, "content" => $content]);
     }
     public function autozoneNearMe()
     {
         $content = Content::where("page", "autozone near me")->get();
-        return view("autozone-near-me",["ctis"=>$this->cities,"content"=>$content]);
+        return view("autozone-near-me", ["ctis" => $this->cities, "content" => $content]);
     }
     public function autotrader()
     {
         $content = Content::where("page", "autotrader")->get();
-        return view("autotrader",["ctis"=>$this->cities,"content"=>$content]);
+        return view("autotrader", ["ctis" => $this->cities, "content" => $content]);
     }
     public function trulia()
     {
         $content = Content::where("page", "trulia")->get();
-        return view("trulia",["ctis"=>$this->cities,"content"=>$content]);
+        return view("trulia", ["ctis" => $this->cities, "content" => $content]);
     }
     // Companies ends
 
@@ -104,27 +107,27 @@ class SiteController extends Controller
     public function homes()
     {
         $content = Content::where("page", "homes")->get();
-        return view("homes",["ctis"=>$this->cities,"content"=>$content]);
+        return view("homes", ["ctis" => $this->cities, "content" => $content]);
     }
     public function homesForSale()
     {
         $content = Content::where("page", "homes for sale")->get();
-        return view("homes-for-sale",["ctis"=>$this->cities,"content"=>$content]);
+        return view("homes-for-sale", ["ctis" => $this->cities, "content" => $content]);
     }
     public function homesForSaleNearMe()
     {
         $content = Content::where("page", "homes for sale near me")->get();
-        return view("homes-for-sale-near-me",["ctis"=>$this->cities,"content"=>$content]);
+        return view("homes-for-sale-near-me", ["ctis" => $this->cities, "content" => $content]);
     }
     public function houseForSale()
     {
         $content = Content::where("page", "house for sale")->get();
-        return view("house-for-sale",["ctis"=>$this->cities,"content"=>$content]);
+        return view("house-for-sale", ["ctis" => $this->cities, "content" => $content]);
     }
     public function houseForSaleNearMe()
     {
         $content = Content::where("page", "house for sale near me")->get();
-        return view("house-for-sale-near-me",["ctis"=>$this->cities,"content"=>$content]);   
+        return view("house-for-sale-near-me", ["ctis" => $this->cities, "content" => $content]);
     }
     // Homes & Houses ends
 
@@ -133,27 +136,27 @@ class SiteController extends Controller
     public function carsForSale()
     {
         $content = Content::where("page", "cars for sale")->get();
-        return view("cars-for-sale",["ctis"=>$this->cities,"content"=>$content]);
+        return view("cars-for-sale", ["ctis" => $this->cities, "content" => $content]);
     }
     public function usedCars()
     {
         $content = Content::where("page", "used cars")->get();
-        return view("used-cars",["ctis"=>$this->cities,"content"=>$content]);
+        return view("used-cars", ["ctis" => $this->cities, "content" => $content]);
     }
     public function bikesShop()
     {
         $content = Content::where("page", "bikes shop")->get();
-        return view("bikes-shop",["ctis"=>$this->cities,"content"=>$content]);
+        return view("bikes-shop", ["ctis" => $this->cities, "content" => $content]);
     }
     public function usedCarsForSale()
     {
         $content = Content::where("page", "used cars for sale")->get();
-        return view("used-cars-for-sale",["ctis"=>$this->cities,"content"=>$content]);
+        return view("used-cars-for-sale", ["ctis" => $this->cities, "content" => $content]);
     }
     public function motorcycleSale()
     {
         $content = Content::where("page", "motorcycle sale")->get();
-        return view("motorcycle-sale",["ctis"=>$this->cities,"content"=>$content]);
+        return view("motorcycle-sale", ["ctis" => $this->cities, "content" => $content]);
     }
     // cars ends
 
@@ -162,27 +165,27 @@ class SiteController extends Controller
     public function bikesShopNearMe()
     {
         $content = Content::where("page", "bikes shop near me")->get();
-        return view("bikes-shop-near-me",["ctis"=>$this->cities,"content"=>$content]);
+        return view("bikes-shop-near-me", ["ctis" => $this->cities, "content" => $content]);
     }
     public function carGurusUsedCars()
     {
         $content = Content::where("page", "cargurus used cars")->get();
-        return view("car-gurus-used-cars",["ctis"=>$this->cities,"content"=>$content]);
+        return view("car-gurus-used-cars", ["ctis" => $this->cities, "content" => $content]);
     }
     public function carForSaleNearMe()
     {
         $content = Content::where("page", "car for sale near me")->get();
-        return view("car-for-sale-near-me",["ctis"=>$this->cities,"content"=>$content]);
+        return view("car-for-sale-near-me", ["ctis" => $this->cities, "content" => $content]);
     }
     public function usedCarsForSaleNearMe()
     {
         $content = Content::where("page", "used cars for sale near me")->get();
-        return view("used-cars-for-sale-near-me",["ctis"=>$this->cities,"content"=>$content]);
+        return view("used-cars-for-sale-near-me", ["ctis" => $this->cities, "content" => $content]);
     }
     public function classicCarsForSale()
     {
         $content = Content::where("page", "classic cars for sale")->get();
-        return view("classic-cars-for-sale",["ctis"=>$this->cities,"content"=>$content]);
+        return view("classic-cars-for-sale", ["ctis" => $this->cities, "content" => $content]);
     }
     // Bikes & Shops Ends
 
@@ -192,39 +195,246 @@ class SiteController extends Controller
     // Cities pages starts
     public function carsForSaleCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
-        $city_info = City::where("city", $city)->get();
-        $content = Content::where("page", "cars for sale city")->get();
 
-        return view("cities-pages.cars-for-sale-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content]);
+        $dom = "";
+        // scrapping starts
+        include(app_path() . '\functions\simple_html_dom.php');
+
+        try {
+            $dom = file_get_html("https://en.wikipedia.org/wiki/$ct", false);
+        } catch (\Throwable $th) {
+            $dom = "";
+        }
+
+        $answer = array();
+        if (!empty($dom)) {
+
+            $divClass = $content = "";
+            $i = 0;
+
+            error_log("inside dom");
+            foreach ($dom->find(".mw-parser-output") as $divClass) {
+
+                error_log("inside 1st for");
+
+                foreach ($divClass->find("p") as $desc) {
+
+                    $text = html_entity_decode($desc->plaintext);
+                    $text = preg_replace('/\[.*?\]/', "", $text);
+                    $text = preg_replace('/\&#39;/', "", $text);
+                    $answer[$i] = html_entity_decode($text);
+
+                    error_log($answer[$i]);
+
+                    $i++;
+
+                    if ($i > 2) {
+                        break;
+                    }
+                }
+                error_log($i);
+            }
+        }
+        // scrapping ends
+
+
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
+        $city_info = City::where("city", $city)->first();
+        $content = Content::where("page", "cars for sale city")->first();
+
+
+
+        return view("cities-pages.cars-for-sale-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content, "content2" => $answer]);
     }
     public function carGurusCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
-        $city_info = City::where("city", $city)->get();
-        $content = Content::where("page", "cargurus city")->get();
+        // scrapping starts
+        include(app_path() . '\functions\simple_html_dom.php');
 
-        return view("cities-pages.car-gurus-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content]);
+        $dom = "";
+        
+        $dom = file_get_html("https://en.wikipedia.org/wiki/$ct", false);
+
+        $answer = array();
+        if (!empty($dom)) {
+
+            $divClass = $content = "";
+            $i = 0;
+
+            error_log("inside dom");
+            foreach ($dom->find(".mw-parser-output") as $divClass) {
+
+                error_log("inside 1st for");
+
+                foreach ($divClass->find("p") as $desc) {
+
+                    $text = html_entity_decode($desc->plaintext);
+                    $text = preg_replace('/\[.*?\]/', "", $text);
+                    $text = preg_replace('/\&#39;/', "", $text);
+                    $answer[$i] = html_entity_decode($text);
+
+                    error_log($answer[$i]);
+
+                    $i++;
+
+                    if ($i > 4) {
+                        break;
+                    }
+                }
+                error_log($i);
+            }
+        }
+
+        // ----------------------------
+
+        $dom2 = file_get_html("https://www.google.com/search?q=pakistan&tbm=nws", false);
+
+        $news = array();
+        if (!empty($dom2)) {
+
+            
+
+            $divClass = $news = "";
+            $i = 0;
+
+            error_log("inside dom2");
+            foreach ($dom2->find(".KWQBje") as $divClass) {
+
+                error_log("inside 1st for");
+
+                // link
+                foreach ($divClass->find(".JheGif") as $title) {
+
+                   $news[$i]["title"]=$title->plaintext;
+                }
+
+                foreach ($divClass->find(".Y3v8qd") as $caption) {
+
+                    $news[$i]["caption"]=$caption->plaintext;
+                 }
+
+                $i++;
+
+                
+                error_log("news-title=".$news[$i]["title"]);
+                error_log("news-caption=".$news[$i]["caption"]);
+
+                
+            }
+        }
+
+        // scrapping ends
+
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
+        $city_info = City::where("city", $city)->first();
+        $content = Content::where("page", "cargurus city")->first();
+
+
+
+        return view("cities-pages.car-gurus-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content, "content2" => $answer]);
     }
     public function carGurusUsedCarsCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct));
-        $city_info = City::where("city", $city)->get();
-        $content = Content::where("page", "cargurus used cars city")->get();
+        // scrapping starts
+        include(app_path() . '\functions\simple_html_dom.php');
 
-        return view("cities-pages.car-gurus-used-cars-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content]);
+        $dom = "";
+        try {
+            $dom = file_get_html("https://en.wikipedia.org/wiki/$ct", false);
+        } catch (\Throwable $th) {
+            $dom = "";
+        }
+
+        $answer = array();
+        if (!empty($dom)) {
+
+            $divClass = $content = "";
+            $i = 0;
+
+            error_log("inside dom");
+            foreach ($dom->find(".mw-parser-output") as $divClass) {
+
+                error_log("inside 1st for");
+
+                foreach ($divClass->find("p") as $desc) {
+
+                    $text = html_entity_decode($desc->plaintext);
+                    $text = preg_replace('/\[.*?\]/', "", $text);
+                    $text = preg_replace('/\&#39;/', "", $text);
+                    $answer[$i] = html_entity_decode($text);
+
+                    error_log($answer[$i]);
+
+                    $i++;
+
+                    if ($i > 2) {
+                        break;
+                    }
+                }
+                error_log($i);
+            }
+        }
+        // scrapping ends
+
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
+        $city_info = City::where("city", $city)->first();
+        $content = Content::where("page", "cargurus used cars city")->first();
+
+        return view("cities-pages.car-gurus-used-cars-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content, "content2" => $answer]);
     }
     public function autozoneCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
-        $city_info = City::where("city", $city)->get();
-        $content = Content::where("page", "autozone city")->get();
 
-        return view("cities-pages.autozone-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content]);
+        // scrapping starts
+        include(app_path() . '\functions\simple_html_dom.php');
+
+        $dom = "";
+        try {
+            $dom = file_get_html("https://en.wikipedia.org/wiki/$ct", false);
+        } catch (\Throwable $th) {
+            $dom = "";
+        }
+
+        $answer = array();
+        if (!empty($dom)) {
+
+            $divClass = $content = "";
+            $i = 0;
+
+            error_log("inside dom");
+            foreach ($dom->find(".mw-parser-output") as $divClass) {
+
+                error_log("inside 1st for");
+
+                foreach ($divClass->find("p") as $desc) {
+
+                    $text = html_entity_decode($desc->plaintext);
+                    $text = preg_replace('/\[.*?\]/', "", $text);
+                    $text = preg_replace('/\&#39;/', "", $text);
+                    $answer[$i] = html_entity_decode($text);
+
+                    error_log($answer[$i]);
+
+                    $i++;
+
+                    if ($i > 2) {
+                        break;
+                    }
+                }
+                error_log($i);
+            }
+        }
+        // scrapping ends
+        
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
+        $city_info = City::where("city", $city)->first();
+        $content = Content::where("page", "autozone city")->first();
+
+        return view("cities-pages.autozone-city", ["ctis" => $this->cities, "infos" => $city_info, "content" => $content, "content2" => $answer]);
     }
     public function autotraderCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "autotrader city")->get();
 
@@ -232,7 +442,7 @@ class SiteController extends Controller
     }
     public function autozoneNearMeCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "autozone near me city")->get();
 
@@ -240,7 +450,7 @@ class SiteController extends Controller
     }
     public function bikesShopNearMeCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "bikes shop near me city")->get();
 
@@ -248,7 +458,7 @@ class SiteController extends Controller
     }
     public function bikesShopCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "bikes shop city")->get();
 
@@ -256,7 +466,7 @@ class SiteController extends Controller
     }
     public function carForSaleNearMeCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "car for sale near me city")->get();
 
@@ -264,7 +474,7 @@ class SiteController extends Controller
     }
     public function classicCarsForSaleCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "classic cars for sale city")->get();
 
@@ -272,7 +482,7 @@ class SiteController extends Controller
     }
     public function homesForSaleNearMeCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "homes for sale near me city")->get();
 
@@ -280,7 +490,7 @@ class SiteController extends Controller
     }
     public function homesForSaleCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "homes for sale city")->get();
 
@@ -288,7 +498,7 @@ class SiteController extends Controller
     }
     public function homesCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "homes city")->get();
 
@@ -296,7 +506,7 @@ class SiteController extends Controller
     }
     public function houseForSaleNearMeCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "house for sale near me city")->get();
 
@@ -304,7 +514,7 @@ class SiteController extends Controller
     }
     public function houseForSaleCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "house for sale city")->get();
 
@@ -312,7 +522,7 @@ class SiteController extends Controller
     }
     public function motorcycleSaleCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "motorcycle sale city")->get();
 
@@ -320,7 +530,7 @@ class SiteController extends Controller
     }
     public function truliaCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "trulia city")->get();
 
@@ -328,7 +538,7 @@ class SiteController extends Controller
     }
     public function usedCarsForSaleNearMeCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "used cars for sale near me city")->get();
 
@@ -336,7 +546,7 @@ class SiteController extends Controller
     }
     public function usedCarsForSaleCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "used cars for sale city")->get();
 
@@ -344,7 +554,7 @@ class SiteController extends Controller
     }
     public function usedCarsCity($ct)
     {
-        $city = strtolower(preg_replace('/-/', ' ', $ct)); 
+        $city = strtolower(preg_replace('/-/', ' ', $ct));
         $city_info = City::where("city", $city)->get();
         $content = Content::where("page", "used cars city")->get();
 
@@ -353,5 +563,5 @@ class SiteController extends Controller
 
 
     // cities pages ends
-   
+
 }

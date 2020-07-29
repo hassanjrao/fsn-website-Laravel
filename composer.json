@@ -41,6 +41,8 @@
             "database/seeds",
             "database/factories"
         ]
+       
+       
     },
     "autoload-dev": {
         "psr-4": {

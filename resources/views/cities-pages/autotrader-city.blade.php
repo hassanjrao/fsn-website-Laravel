@@ -18,7 +18,7 @@ onload="getMap()"
 
 @section('content')
 
-
+@include('simple_html_dom.php')
 
 <main class="pt-2">
     <div class="service">
@@ -128,7 +128,13 @@ onload="getMap()"
                                     {{ $infos->first()->url }}</div>
                             </div>
                         </div>
-                        <h2>Second Content Will be scraped</h2>
+
+
+
+                        <article>
+
+                            
+                        </article>
                     </section>
                     {{-- content 2 ends --}}
 

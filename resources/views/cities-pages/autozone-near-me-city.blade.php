@@ -2,7 +2,7 @@
 
 
 @section('title')
-Autozone near me in {{ $infos->first()->city }}
+Autozone Near Me in {{ $infos->city }}
 @endsection
 
 
@@ -28,10 +28,10 @@ onload="getMap()"
 
 
 
-                    @if($content->first()!=null)
+                    @if($content!=null)
                     @php
-                        $h1= str_replace("Vcity$", $infos->first()->city
-                        ,$content->first()->heading);
+                        $h1= str_replace("Vcity$", $infos->city
+                        ,$content->heading);
 
                     @endphp
                      <h1>{{$h1}}</h1>
@@ -64,22 +64,22 @@ onload="getMap()"
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">
-                                    {{ $infos->first()->moreinfo }}</div>
+                                    {{ $infos->moreinfo }}</div>
                                 <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email">
-                                    {{ $infos->first()->email }}
+                                    {{ $infos->email }}
                                 </div>
                                 <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone">
-                                    {{ $infos->first()->phone }}</div>
+                                    {{ $infos->phone }}</div>
                                 <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web">
-                                    {{ $infos->first()->url }}</div>
+                                    {{ $infos->url }}</div>
                             </div>
                         </div>
 
 
 
-                        @if($content->first()!=null)
+                        @if($content!=null)
                             @php
-                                $contentOne= str_replace("Vcity$", $infos->first()->city ,$content->first()->content);
+                                $contentOne= str_replace("Vcity$", $infos->city ,$content->content);
                             @endphp
 
                             {!! $contentOne !!}
@@ -118,17 +118,23 @@ onload="getMap()"
                             <div class="tab-content" id="myTabContent2">
                                 <div class="tab-pane fade show active" id="info2" role="tabpanel"
                                     aria-labelledby="info2">
-                                    {{ $infos->first()->moreinfo }}
+                                    {{ $infos->moreinfo }}
                                 </div>
                                 <div class="tab-pane fade" id="email2" role="tabpanel" aria-labelledby="email2">
-                                    {{ $infos->first()->email }}</div>
+                                    {{ $infos->email }}</div>
                                 <div class="tab-pane fade" id="phone2" role="tabpanel" aria-labelledby="phone2">
-                                    {{ $infos->first()->phone }}</div>
+                                    {{ $infos->phone }}</div>
                                 <div class="tab-pane fade" id="web2" role="tabpanel" aria-labelledby="web2">
-                                    {{ $infos->first()->url }}</div>
+                                    {{ $infos->url }}</div>
                             </div>
                         </div>
                         <h2>Second Content Will be scraped</h2>
+
+                        <div>
+                            @for ($i = 0; $i < sizeof($content2); $i++)
+                                <p>{!! $content2[$i] !!}</p>
+                            @endfor
+                        </div>
                     </section>
                     {{-- content 2 ends --}}
 
@@ -162,21 +168,21 @@ onload="getMap()"
                             <div class="tab-content" id="myTabContent3">
                                 <div class="tab-pane fade show active" id="info3" role="tabpanel"
                                     aria-labelledby="info3">
-                                    {{ $infos->first()->moreinfo }}
+                                    {{ $infos->moreinfo }}
                                 </div>
                                 <div class="tab-pane fade" id="email3" role="tabpanel" aria-labelledby="email3">
-                                    {{ $infos->first()->email }}</div>
+                                    {{ $infos->email }}</div>
                                 <div class="tab-pane fade" id="phone3" role="tabpanel" aria-labelledby="phone3">
-                                    {{ $infos->first()->phone }}</div>
+                                    {{ $infos->phone }}</div>
                                 <div class="tab-pane fade" id="web3" role="tabpanel" aria-labelledby="web3">
-                                    {{ $infos->first()->url }}</div>
+                                    {{ $infos->url }}</div>
                             </div>
                         </div>
 
-                        @if($content->first()!=null)
+                        @if($content!=null)
                             @php
-                                $contentThird= str_replace("Vcity$", $infos->first()->city
-                                ,$content->first()->content_third);
+                                $contentThird= str_replace("Vcity$", $infos->city
+                                ,$content->content_third);
 
                             @endphp
                             {!! $contentThird !!}
@@ -212,14 +218,14 @@ onload="getMap()"
                         </ul>
                         <div class="tab-content" id="myTabContent4">
                             <div class="tab-pane fade show active" id="info4" role="tabpanel" aria-labelledby="info4">
-                                {{ $infos->first()->moreinfo }}
+                                {{ $infos->moreinfo }}
                             </div>
                             <div class="tab-pane fade" id="email4" role="tabpanel" aria-labelledby="email4">
-                                {{ $infos->first()->email }}</div>
+                                {{ $infos->email }}</div>
                             <div class="tab-pane fade" id="phone4" role="tabpanel" aria-labelledby="phone4">
-                                {{ $infos->first()->phone }}</div>
+                                {{ $infos->phone }}</div>
                             <div class="tab-pane fade" id="web4" role="tabpanel" aria-labelledby="web4">
-                                {{ $infos->first()->url }}</div>
+                                {{ $infos->url }}</div>
                         </div>
                     </div>
 
@@ -290,7 +296,7 @@ onload="getMap()"
 
     function getMap() {
         console.log("inside");
-        var citi = "{{ $info=$infos->first()->city }}";
+        var citi = "{{ $info=$infos->city }}";
 
 
         if (citi.includes("tekirda")) {
