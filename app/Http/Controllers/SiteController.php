@@ -198,7 +198,7 @@ class SiteController extends Controller
 
         $dom = "";
         // scrapping starts
-        include(app_path() . '\functions\simple_html_dom.php');
+        include('\functions\simple_html_dom.php');
 
         try {
             $dom = file_get_html("https://en.wikipedia.org/wiki/$ct", false);
