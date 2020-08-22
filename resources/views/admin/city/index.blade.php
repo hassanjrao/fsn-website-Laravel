@@ -45,6 +45,7 @@
                                                     <th data-breakpoints="xs">Phone</th>
                                                     <th data-breakpoints="xs">URL</th>
                                                     <th data-breakpoints="xs">More Info</th>
+                                                    <th data-breakpoints="xs">Wiki URL</th>
                                                     <th data-breakpoints="xs sm md">Edit/Delete</th>
 
                                                 </tr>
@@ -77,6 +78,9 @@
                                                 </td>
                                                 <td>
                                                     <p class="c_name">{{ $city->moreinfo }}</p>
+                                                </td>
+                                                <td>
+                                                    <p class="c_name">{{ $city->wiki_link }}</p>
                                                 </td>
                                                 <td>
                                                     <a href="{{ route("admin.city.show","$city->id") }}"

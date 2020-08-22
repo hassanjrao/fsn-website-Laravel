@@ -33,6 +33,7 @@ class AdminCityController extends Controller
         $city->phone=request("phone");
         $city->url=request("url");
         $city->moreinfo=request("moreinfo");
+        $city->wiki_link=request("wikilink");
         
 
         $city->save();
@@ -53,16 +54,17 @@ class AdminCityController extends Controller
         $phone=request("phone");
         $url=request("url");
         $moreinfo=request("moreinfo");
-        City::where("id",$id)->update(["city"=>$city,"email"=>$email,"phone"=>$phone,"url"=>$url,"moreinfo"=>$moreinfo]);
+        $wiki_link=request("wikilink");
+        City::where("id",$id)->update(["city"=>$city,"email"=>$email,"phone"=>$phone,"url"=>$url,"moreinfo"=>$moreinfo,"wiki_link"=>$wiki_link]);
 
         return redirect("/admin/city/");
     }
 
     public function destroy($id)
     {
-        $pizza=City::findorfail($id);
+        $city=City::findorfail($id);
 
-        $pizza->delete();
+        $city->delete();
 
         return redirect('/admin/city/');
     }

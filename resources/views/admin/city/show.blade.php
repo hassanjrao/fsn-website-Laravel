@@ -32,6 +32,9 @@
                         <div class="input-group mb-3">
                             <input type="text" name="moreinfo" class="form-control" placeholder="More Info" value="{{$city->moreinfo}}" />
                         </div>
+                        <div class="input-group mb-3">
+                            <input type="text" name="wikilink" class="form-control" placeholder="More Info" value="{{$city->wiki_link}}" />
+                        </div>
 
 
                         <input type="submit" name="submit" class="btn btn-primary btn-block waves-effect waves-light"

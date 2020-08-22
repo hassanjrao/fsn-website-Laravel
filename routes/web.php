@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "SiteController@index")->name("/");
 
+// contact route starts
+Route::post('/contact', "SiteController@contact");
+// contact route ends
+
 // Home starts
 Route::get("/about","SiteController@about")->name("about");
 Route::get("/disclaimer","SiteController@disclaimer")->name("disclaimer");
@@ -55,6 +59,8 @@ Route::get("motorcycle-sale","SiteController@motorcycleSale")->name("motorcycle-
 // Cars ends
 
 
+
+
 // Bikes & Shops starts
 Route::get("/bikes-shop-near-me","SiteController@bikesShopNearMe")->name("bikes-shop-near-me");
 Route::get("/car-gurus-used-cars","SiteController@carGurusUsedCars")->name("car-gurus-used-cars");
@@ -62,6 +68,8 @@ Route::get("/car-for-sale-near-me","SiteController@carForSaleNearMe")->name("car
 Route::get("/used-cars-for-sale-near-me","SiteController@usedCarsForSaleNearMe")->name("used-cars-for-sale-near-me");
 Route::get("/classic-cars-for-sale","SiteController@classicCarsForSale")->name("classic-cars-for-sale");
 // Bikes & Shops ends
+
+
 
 
 
@@ -93,8 +101,7 @@ Route::get('/used-cars-{city}', "SiteController@usedCarsCity")->name("used-cars-
 
 
 
-Auth::routes();
-
+Auth::routes(["register"=>false]);
 
 
 
@@ -113,6 +120,22 @@ Route::get('/admin/city/update/{id}',"AdminCityController@show")->name("admin.ci
 Route::post('/admin/city/update/{id}',"AdminCityController@update")->name("admin.city.update")->middleware("auth");
 Route::delete('/admin/city/destroy/{id}',"AdminCityController@destroy")->name("admin.city.destroy")->middleware("auth");
 // admin/city ends
+
+// admin/slider images starts
+Route::get('/admin/slider',"AdminSliderController@index")->name("admin.slider.index")->middleware("auth");
+Route::get('/admin/slider/create',"AdminSliderController@create")->name("admin.slider.create")->middleware("auth");
+Route::post('/admin/slider/store',"AdminSliderController@store")->name("admin.slider.store")->middleware("auth");
+Route::delete('/admin/slider/destroy/{id}',"AdminSliderController@destroy")->name("admin.slider.destroy")->middleware("auth");
+// admin/slider images ends
+
+// admin/moving_img starts
+Route::get('/admin/moving-images',"AdminMovingImgController@index")->name("admin.moving.index")->middleware("auth");
+Route::get('/admin/moving-images/create',"AdminMovingImgController@create")->name("admin.moving.create")->middleware("auth");
+Route::post('/admin/moving-images/store',"AdminMovingImgController@store")->name("admin.moving.store")->middleware("auth");
+Route::get('/admin/moving-images/update/{id}',"AdminMovingImgController@show")->name("admin.moving.show")->middleware("auth");
+Route::post('/admin/moving-images/update/{id}',"AdminMovingImgController@update")->name("admin.moving.update")->middleware("auth");
+Route::delete('/admin/moving-images/destroy/{id}',"AdminMovingImgController@destroy")->name("admin.moving.destroy")->middleware("auth");
+// admin/moving_img ends
 
 
 //  admin/blog starts

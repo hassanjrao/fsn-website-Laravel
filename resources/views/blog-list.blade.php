@@ -19,7 +19,8 @@ Blogs
 
 
                     @php
-                        $tit= strtolower(preg_replace('/\s+/', '-', $blog->title));
+                        $t= strtolower(preg_replace('/\s+/', '-', $blog->title));
+                        $tit= preg_replace('/\?/', '', $t);
                     @endphp
 
                         <div class="col-lg-6 col-md-6 col-sm-6">

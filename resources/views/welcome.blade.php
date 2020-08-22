@@ -104,12 +104,17 @@ Home
 
 
 
-                <div class="col-lg-3">
-                    <div class="categories__item set-bg" data-setbg="images/product/small-robbins.jpg">
-                        <h5><a href="#">robinns</a></h5>
-                    </div>
-                </div>
+                @foreach($moving_imgs as $img)
 
+
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg"
+                            data-setbg="{{asset("/storage/images/moving-imgs/$img->image")}}">
+                            <h5><a href="#">{{ $img->caption }}</a></h5>
+                        </div>
+                    </div>
+
+                @endforeach
 
 
             </div>
@@ -229,26 +234,26 @@ Home
 
 @endsection
 
-    
+
 
 @section('footer')
 
 @php
 
-$cts = array();
-$z = 0;
-$done_cities = array();
-$cities=[];
-$ind=0;
+    $cts = array();
+    $z = 0;
+    $done_cities = array();
+    $cities=[];
+    $ind=0;
 
-foreach($ctis as $ct){
+    foreach($ctis as $ct){
     $cities[$ind++]= $ct->city;
-}
+    }
 
-$totalCities = count($cities);
+    $totalCities = count($cities);
 
-$n = range(0, $totalCities - 1);
-shuffle($n);
+    $n = range(0, $totalCities - 1);
+    shuffle($n);
 
 @endphp
 

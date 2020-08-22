@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-    <title>@yield('title')</title>
+    <title>Admin Panel @yield('title')</title>
     <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
     <!-- Favicon-->
     <link rel="stylesheet" href="../../../admin-assets/assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -81,8 +81,8 @@
                 <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Slider
                             Images</span></a>
                     <ul class="ml-menu">
-                        <li><a href="add_slider_img.php">Add Image</a></li>
-                        <li><a href="all_slider_img.php">All Images</a></li>
+                        <li><a href="{{ route('admin.slider.create') }}">Add Image</a></li>
+                        <li><a href="{{ route('admin.slider.index') }}">All Images</a></li>
 
                     </ul>
                 </li>
@@ -90,8 +90,8 @@
                 <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Moving
                             Images</span></a>
                     <ul class="ml-menu">
-                        <li><a href="add_moving_images.php">Add Image</a></li>
-                        <li><a href="all_moving_images.php">All Images</a></li>
+                        <li><a href="{{ route('admin.moving.create') }}">Add Image</a></li>
+                        <li><a href="{{ route('admin.moving.index') }}">All Images</a></li>
 
                     </ul>
                 </li>

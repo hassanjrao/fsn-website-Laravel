@@ -15,23 +15,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/nice-select.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/jquery-ui.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/slicknav.min.css')}}" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{asset('slick/slick.css')}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset('slick/slick-theme3.css')}}" />
 
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/slicknav.min.css') }}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick-theme3.css') }}" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('favicon/site.webmanifest')}}">
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+   
     @yield('links')
 
 
@@ -54,7 +58,7 @@
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
             <a href="index.php" style="font-size:x-large; font-style:bolder; color:black;">
-                <img src="{{asset('images/logo.png')}}" alt="logo"></a>
+                <img src="{{ asset('images/logo.png') }}" alt="logo"></a>
         </div>
 
 
@@ -82,9 +86,11 @@
                     <ul class="header__menu__dropdown">
                         <li><a href="{{ route("homes") }}">Homes</a></li>
                         <li><a href="{{ route("homes-for-sale") }}">Homes for sale</a></li>
-                        <li><a href="{{ route("homes-for-sale-near-me") }}">Homes for sale near me</a></li>
+                        <li><a href="{{ route("homes-for-sale-near-me") }}">Homes for sale near me</a>
+                        </li>
                         <li><a href="{{ route("house-for-sale") }}">house for sale</a></li>
-                        <li><a href="{{ route("house-for-sale-near-me") }}">house for sale near me</a></li>
+                        <li><a href="{{ route("house-for-sale-near-me") }}">house for sale near me</a>
+                        </li>
                     </ul>
 
                 </li>
@@ -104,9 +110,12 @@
                     <ul class="header__menu__dropdown">
                         <li><a href="{{ route("bikes-shop-near-me") }}">bikes shop near me</a></li>
                         <li><a href="{{ route("car-gurus-used-cars") }}">carGurus used cars</a></li>
-                        <li><a href="{{route("car-for-sale-near-me")}}">car for sale near me</a></li>
-                        <li><a href="{{route("used-cars-for-sale-near-me")}}">used cars for sale near me</a></li>
-                        <li><a href="{{route("classic-cars-for-sale")}}">classic cars for sale</a></li>
+                        <li><a href="{{ route("car-for-sale-near-me") }}">car for sale near me</a>
+                        </li>
+                        <li><a href="{{ route("used-cars-for-sale-near-me") }}">used cars for sale
+                                near me</a></li>
+                        <li><a href="{{ route("classic-cars-for-sale") }}">classic cars for sale</a>
+                        </li>
                     </ul>
 
                 </li>
@@ -141,8 +150,10 @@
 
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="{{route('/')}}" style="font-size:x-large; font-style:bolder; color:black;">
-                            <img src="{{asset('images/logo.png')}}" alt="logo" width="150px" height="50px"></a>
+                        <a href="{{ route('/') }}"
+                            style="font-size:x-large; font-style:bolder; color:black;">
+                            <img src="{{ asset('images/logo.png') }}" alt="logo" width="150px"
+                                height="50px"></a>
                     </div>
                 </div>
 
@@ -174,10 +185,14 @@
                             <li><a href="#">Homes & houses</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="{{ route("homes") }}">Homes</a></li>
-                                    <li><a href="{{ route("homes-for-sale") }}">Homes for sale</a></li>
-                                    <li><a href="{{ route("homes-for-sale-near-me") }}">Homes for sale near me</a></li>
-                                    <li><a href="{{ route("house-for-sale") }}">house for sale</a></li>
-                                    <li><a href="{{ route("house-for-sale-near-me") }}">house for sale near me</a></li>
+                                    <li><a href="{{ route("homes-for-sale") }}">Homes for sale</a>
+                                    </li>
+                                    <li><a href="{{ route("homes-for-sale-near-me") }}">Homes for sale
+                                            near me</a></li>
+                                    <li><a href="{{ route("house-for-sale") }}">house for sale</a>
+                                    </li>
+                                    <li><a href="{{ route("house-for-sale-near-me") }}">house for sale
+                                            near me</a></li>
                                 </ul>
 
                             </li>
@@ -187,19 +202,26 @@
                                     <li><a href="{{ route("cars-for-sale") }}">cars for sale</a></li>
                                     <li><a href="{{ route("used-cars") }}">used cars</a></li>
                                     <li><a href="{{ route("bikes-shop") }}">bikes shop</a></li>
-                                    <li><a href="{{ route("used-cars-for-sale") }}">used cars for sale</a></li>
-                                    <li><a href="{{ route("motorcycle-sale") }}">motorcycle sale</a></li>
+                                    <li><a href="{{ route("used-cars-for-sale") }}">used cars for
+                                            sale</a></li>
+                                    <li><a href="{{ route("motorcycle-sale") }}">motorcycle sale</a>
+                                    </li>
                                 </ul>
 
                             </li>
 
                             <li><a href="#">Bikes & Cars</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="{{ route("bikes-shop-near-me") }}">bikes shop near me</a></li>
-                                    <li><a href="{{ route("car-gurus-used-cars") }}">carGurus used cars</a></li>
-                                    <li><a href="{{route("car-for-sale-near-me")}}">car for sale near me</a></li>
-                                    <li><a href="{{route("used-cars-for-sale-near-me")}}">used cars for sale near me</a></li>
-                                    <li><a href="{{route("classic-cars-for-sale")}}">classic cars for sale</a></li>
+                                    <li><a href="{{ route("bikes-shop-near-me") }}">bikes shop near
+                                            me</a></li>
+                                    <li><a href="{{ route("car-gurus-used-cars") }}">carGurus used
+                                            cars</a></li>
+                                    <li><a href="{{ route("car-for-sale-near-me") }}">car for sale
+                                            near me</a></li>
+                                    <li><a href="{{ route("used-cars-for-sale-near-me") }}">used cars
+                                            for sale near me</a></li>
+                                    <li><a href="{{ route("classic-cars-for-sale") }}">classic cars
+                                            for sale</a></li>
                                 </ul>
 
                             </li>
@@ -248,7 +270,8 @@
                                             </li>
                                             <li><a href="{{ route("autozone-near-me") }}">Autozone
                                                     near me</a></li>
-                                            <li><a href="{{ route("autotrader") }}">Autotrader</a></li>
+                                            <li><a href="{{ route("autotrader") }}">Autotrader</a>
+                                            </li>
                                             <li><a href="{{ route("trulia") }}">Trulia</a></li>
                                         </ul>
                                     </li>
@@ -262,10 +285,14 @@
                                     <li><a href="#">Homes & houses</a>
                                         <ul class="header__menu__dropdown">
                                             <li><a href="{{ route("homes") }}">Homes</a></li>
-                                            <li><a href="{{ route("homes-for-sale") }}">Homes for sale</a></li>
-                                            <li><a href="{{ route("homes-for-sale-near-me") }}">Homes for sale near me</a></li>
-                                            <li><a href="{{ route("house-for-sale") }}">house for sale</a></li>
-                                            <li><a href="{{ route("house-for-sale-near-me") }}">house for sale near me</a></li>
+                                            <li><a href="{{ route("homes-for-sale") }}">Homes for
+                                                    sale</a></li>
+                                            <li><a href="{{ route("homes-for-sale-near-me") }}">Homes
+                                                    for sale near me</a></li>
+                                            <li><a href="{{ route("house-for-sale") }}">house for
+                                                    sale</a></li>
+                                            <li><a href="{{ route("house-for-sale-near-me") }}">house
+                                                    for sale near me</a></li>
                                         </ul>
 
                                     </li>
@@ -282,11 +309,15 @@
 
                                     <li><a href="#">Cars</a>
                                         <ul class="header__menu__dropdown">
-                                            <li><a href="{{ route("cars-for-sale") }}">cars for sale</a></li>
+                                            <li><a href="{{ route("cars-for-sale") }}">cars for
+                                                    sale</a></li>
                                             <li><a href="{{ route("used-cars") }}">used cars</a></li>
-                                            <li><a href="{{ route("bikes-shop") }}">bikes shop</a></li>
-                                            <li><a href="{{ route("used-cars-for-sale") }}">used cars for sale</a></li>
-                                            <li><a href="{{ route("motorcycle-sale") }}">motorcycle sale</a></li>
+                                            <li><a href="{{ route("bikes-shop") }}">bikes shop</a>
+                                            </li>
+                                            <li><a href="{{ route("used-cars-for-sale") }}">used cars
+                                                    for sale</a></li>
+                                            <li><a href="{{ route("motorcycle-sale") }}">motorcycle
+                                                    sale</a></li>
                                         </ul>
 
                                     </li>
@@ -297,11 +328,16 @@
                                 <ul>
                                     <li><a href="#">Bikes & Cars</a>
                                         <ul class="header__menu__dropdown">
-                                            <li><a href="{{ route("bikes-shop-near-me") }}">bikes shop near me</a></li>
-                                            <li><a href="{{ route("car-gurus-used-cars") }}">carGurus used cars</a></li>
-                                            <li><a href="{{route("car-for-sale-near-me")}}">car for sale near me</a></li>
-                                            <li><a href="{{route("used-cars-for-sale-near-me")}}">used cars for sale near me</a></li>
-                                            <li><a href="{{route("classic-cars-for-sale")}}">classic cars for sale</a></li>
+                                            <li><a href="{{ route("bikes-shop-near-me") }}">bikes shop
+                                                    near me</a></li>
+                                            <li><a href="{{ route("car-gurus-used-cars") }}">carGurus
+                                                    used cars</a></li>
+                                            <li><a href="{{ route("car-for-sale-near-me") }}">car for
+                                                    sale near me</a></li>
+                                            <li><a href="{{ route("used-cars-for-sale-near-me") }}">used
+                                                    cars for sale near me</a></li>
+                                            <li><a href="{{ route("classic-cars-for-sale") }}">classic
+                                                    cars for sale</a></li>
                                         </ul>
 
                                     </li>
@@ -319,8 +355,11 @@
 
                     <div class="slider23 ">
 
-                        <img src="{{asset('images/banner/MLM1.jpg')}}" width="100%" height="400px">
-                        <img src="{{asset('images/banner/MLM2.jpg')}}" width="100%" height="400px">
+                        @foreach($slider as $slider)
+                            <img src={{ asset("/storage/images/slider/$slider->image") }}
+                                width="100%" height="400px">
+                        @endforeach
+
 
                     </div>
 
@@ -400,14 +439,14 @@
 
 
     <!-- Js Plugins -->
-    <script src="{{asset('js/jquery-3.3.1.min.js')}}" defer></script>
-    <script src="{{asset('js/bootstrap.min.js')}}" defer></script>
-    <script src="{{asset('js/jquery.nice-select.min.js')}}" defer></script>
-    <script src="{{asset('js/jquery.slicknav.js')}}" defer></script>
-    <script src="{{asset('js/mixitup.min.js')}}" defer></script>
-    <script src="{{asset('js/owl.carousel.min.js')}}" defer></script>
-    <script type="text/javascript" src="{{asset('slick/slick.min.js')}}" defer></script>
-    <script src="{{asset('js/main11.js')}}" defer></script>
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}" defer></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('js/jquery.nice-select.min.js') }}" defer></script>
+    <script src="{{ asset('js/jquery.slicknav.js') }}" defer></script>
+    <script src="{{ asset('js/mixitup.min.js') }}" defer></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('slick/slick.min.js') }}" defer></script>
+    <script src="{{ asset('js/main11.js') }}" defer></script>
 
     <script type="text/javascript">
         function enable_submit_btn_l() {

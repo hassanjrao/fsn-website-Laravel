@@ -62,6 +62,10 @@
                                             <input type="text" name="moreinfo" class="form-control"
                                                 placeholder="More Info" required="" />
                                         </div>
+                                        <div class="form-group">
+                                            <input type="text" name="wikilink" class="form-control"
+                                                placeholder="Wiki URL" required="" />
+                                        </div>
                                         <button name="submit" type="submit" style="float: right;"
                                             class="btn btn-success btn-sm">Add</button>
                                     </form>

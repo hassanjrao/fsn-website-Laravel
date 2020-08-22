@@ -61,7 +61,7 @@ Cars For Sale
                                     $ct = preg_replace('/\s+/', '-', $city);
                                     
                                 ?>
-                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a>
+                                <li><a href="{{ route("cars-for-sale-city","$ct")}}"><?php echo ucwords($city) ?></a>
                                 </li>
 
                                 <?php
@@ -103,7 +103,7 @@ Cars For Sale
                                     $ct = preg_replace('/\s+/', '-', $city);
                                     
                                 ?>
-                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city) ?></a>
+                                <li><a href="{{ route("cars-for-sale-city","$ct")}}"><?php echo ucwords($city) ?></a>
                                 </li>
 
 
@@ -147,7 +147,7 @@ Cars For Sale
                                     $ct = preg_replace('/\s+/', '-', $city);
                                     
                                 ?>
-                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a>
+                                <li><a href="{{ route("cars-for-sale-city","$ct")}}"><?php echo ucwords($city); ?></a>
                                 </li>
 
                                 <?php }
@@ -188,7 +188,7 @@ Cars For Sale
                                     $ct = preg_replace('/\s+/', '-', $city);
                                   
                                 ?>
-                                <li><a href=<?php echo "mlm-in-" . strtolower($ct); ?>><?php echo ucwords($city); ?></a>
+                                <li><a href="{{ route("cars-for-sale-city","$ct")}}"><?php echo ucwords($city); ?></a>
                                 </li>
 
                                 <?php }

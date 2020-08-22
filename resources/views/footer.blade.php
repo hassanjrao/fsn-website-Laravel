@@ -9,7 +9,7 @@
         <div class="row">
 
 
-            <div class="col-lg-6 my-auto">
+            <div class="col-lg-5 my-auto">
 
                 <div class="row">
 
@@ -227,19 +227,27 @@
 
             </div>
 
-            <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
-                <div class="footer__widget blog">
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
+                <div class="footer__widget">
+                    <p class="mb-1 mt-1">Blogs: </p>
                     <ul>
-                        <li><a href="#">Blog Links 1</a></li>
-                        <li><a href="#">Blog Links 2</a></li>
-                        <li><a href="#">Blog Links 3</a></li>
-                        <li><a href="#">Blog Links 4</a></li>
-                        <li><a href="#">Blog Links 5</a></li>
-                        <li><a href="#">Blog Links 6</a></li>
-                        <li><a href="#">Blog Links 7</a></li>
-                        <li><a href="#">Blog Links 8</a></li>
-                        <li><a href="#">Blog Links 9</a></li>
-                        <li><a href="#">Blog Links 10</a></li>
+                        @php
+                            $i=rand(0,count($cities)-1);
+                        @endphp
+                        @foreach($titles as $title)
+
+                            @php
+                                
+                                $titl=str_replace("Vcity$", $cities[$i],$title->title);
+                               
+                                $t= strtolower(preg_replace('/\s+/', '-', $titl));
+                            
+                            @endphp
+
+                            <li><a class="pt-1"
+                                    href="{{ route("blog",[$t,$title->id]) }}">{{ ucwords($titl) }}</a>
+                            </li>
+                        @endforeach
 
                     </ul>
                 </div>

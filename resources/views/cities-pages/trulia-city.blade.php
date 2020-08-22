@@ -2,19 +2,10 @@
 
 
 @section('title')
-Trulia in {{ $infos->first()->city }}
+Trulia in {{ $infos->city }}
 @endsection
 
 
-@section('links')
-<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" defer type="text/javascript" charset="utf-8"></script>
-<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" defer type="text/javascript" charset="utf-8"></script>
-@endsection
-
-
-@section('onload')
-onload="getMap()"
-@endsection
 
 @section('content')
 
@@ -28,17 +19,19 @@ onload="getMap()"
 
 
 
-                    @if($content->first()!=null)
-                    @php
-                        $h1= str_replace("Vcity$", $infos->first()->city
-                        ,$content->first()->heading);
+                    @if($content!=null)
+                        @php
+                            $h1= str_replace("Vcity$", $infos->city
+                            ,$content->heading);
 
-                    @endphp
-                     <h1>{{$h1}}</h1>
+                        @endphp
+                        <h1>{{ $h1 }}</h1>
 
-                @endif
+                    @endif
 
-                   
+
+
+
 
                     {{-- content 1 starts --}}
 
@@ -47,43 +40,46 @@ onload="getMap()"
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="#info" data-toggle="tab" href="#info" role="tab"
-                                        aria-controls="info" aria-selected="true">More Info</a>
+                                        aria-controls="info" aria-selected="true">About {{ $infos->city }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="#email" data-toggle="tab" href="#email" role="tab"
-                                        aria-controls="email" aria-selected="false">Email</a>
+                                        aria-controls="email" aria-selected="false">{{ $infos->city }} Email</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="#phone" data-toggle="tab" href="#phone" role="tab"
-                                        aria-controls="phone" aria-selected="false">Phone</a>
+                                        aria-controls="phone" aria-selected="false">{{ $infos->city }} Phone</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="#web" data-toggle="tab" href="#web" role="tab"
-                                        aria-controls="web" aria-selected="false">Website</a>
+                                        aria-controls="web" aria-selected="false">{{ $infos->city }} Website</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">
-                                    {{ $infos->first()->moreinfo }}</div>
+                                    {{ $infos->moreinfo }}</div>
                                 <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email">
-                                    {{ $infos->first()->email }}
+                                    {{ $infos->email }}
                                 </div>
                                 <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone">
-                                    {{ $infos->first()->phone }}</div>
+                                    {{ $infos->phone }}</div>
                                 <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web">
-                                    {{ $infos->first()->url }}</div>
+                                    {{ $infos->url }}</div>
                             </div>
                         </div>
 
 
 
-                        @if($content->first()!=null)
+                        @if($content!=null)
                             @php
-                                $contentOne= str_replace("Vcity$", $infos->first()->city ,$content->first()->content);
+                                $contentOne= str_replace("Vcity$", $infos->city ,$content->content);
                             @endphp
 
                             {!! $contentOne !!}
                         @endif
+
+                        <a style="text-decoration:underline; color:#002868;" href={{route("cars-for-sale")}}>Click to read more...</a>
+
 
                     </section>
 
@@ -100,35 +96,58 @@ onload="getMap()"
                             <ul class="nav nav-tabs" id="myTab2" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="#inf2" data-toggle="tab" href="#info2" role="tab"
-                                        aria-controls="info2" aria-selected="true">More Info</a>
+                                        aria-controls="info2" aria-selected="true">About {{ $infos->city }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="#email2" data-toggle="tab" href="#email2" role="tab"
-                                        aria-controls="email2" aria-selected="false">Email</a>
+                                        aria-controls="email2" aria-selected="false">{{ $infos->city }} Email</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="#phone2" data-toggle="tab" href="#phone2" role="tab"
-                                        aria-controls="phone2" aria-selected="false">Phone</a>
+                                        aria-controls="phone2" aria-selected="false">{{ $infos->city }} Phone</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="#web2" data-toggle="tab" href="#web2" role="tab"
-                                        aria-controls="web2" aria-selected="false">Website</a>
+                                        aria-controls="web2" aria-selected="false">{{ $infos->city }} Website</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent2">
                                 <div class="tab-pane fade show active" id="info2" role="tabpanel"
                                     aria-labelledby="info2">
-                                    {{ $infos->first()->moreinfo }}
+                                    {{ $infos->moreinfo }}
                                 </div>
                                 <div class="tab-pane fade" id="email2" role="tabpanel" aria-labelledby="email2">
-                                    {{ $infos->first()->email }}</div>
+                                    {{ $infos->email }}</div>
                                 <div class="tab-pane fade" id="phone2" role="tabpanel" aria-labelledby="phone2">
-                                    {{ $infos->first()->phone }}</div>
+                                    {{ $infos->phone }}</div>
                                 <div class="tab-pane fade" id="web2" role="tabpanel" aria-labelledby="web2">
-                                    {{ $infos->first()->url }}</div>
+                                    {{ $infos->url }}</div>
                             </div>
                         </div>
-                        <h2>Second Content Will be scraped</h2>
+                        <h2>About {{ $infos->city }}</h2>
+                        <br>
+                        <div>
+                            @for($i = 0; $i < sizeof($content2); $i++)
+                                <p>{!! $content2[$i] !!}</p>
+                            @endfor
+                        </div>
+
+
+
+                        @if($news!=null)
+                            <h3>{{ $infos->city }} News</h3>
+
+                            <br>
+                            @foreach($news["value"] as $new)
+                                <div>
+                                    <img src="{{ $new["image"]["thumbnail"] }}"
+                                        alt="" width="350px" height="270px">
+
+                                    <p>{!! $new["body"] !!}</p>
+
+                                </div>
+                            @endforeach
+                        @endif
                     </section>
                     {{-- content 2 ends --}}
 
@@ -140,47 +159,135 @@ onload="getMap()"
 
                     {{-- content 3 starts --}}
                     <section>
-                        <div class="cities-tabs">
-                            <ul class="nav nav-tabs" id="myTab3" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="#inf3" data-toggle="tab" href="#info3" role="tab"
-                                        aria-controls="info3" aria-selected="true">More Info</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="#email3" data-toggle="tab" href="#email3" role="tab"
-                                        aria-controls="email3" aria-selected="false">Email</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="#phone3" data-toggle="tab" href="#phone3" role="tab"
-                                        aria-controls="phone3" aria-selected="false">Phone</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="#web3" data-toggle="tab" href="#web3" role="tab"
-                                        aria-controls="web3" aria-selected="false">Website</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent3">
-                                <div class="tab-pane fade show active" id="info3" role="tabpanel"
-                                    aria-labelledby="info3">
-                                    {{ $infos->first()->moreinfo }}
-                                </div>
-                                <div class="tab-pane fade" id="email3" role="tabpanel" aria-labelledby="email3">
-                                    {{ $infos->first()->email }}</div>
-                                <div class="tab-pane fade" id="phone3" role="tabpanel" aria-labelledby="phone3">
-                                    {{ $infos->first()->phone }}</div>
-                                <div class="tab-pane fade" id="web3" role="tabpanel" aria-labelledby="web3">
-                                    {{ $infos->first()->url }}</div>
-                            </div>
-                        </div>
 
-                        @if($content->first()!=null)
+                        @if($content!=null)
                             @php
-                                $contentThird= str_replace("Vcity$", $infos->first()->city
-                                ,$content->first()->content_third);
+                                $contentThird= str_replace("Vcity$", $infos->city
+                                ,$content->content_third);
 
                             @endphp
                             {!! $contentThird !!}
                         @endif
+                       
+                       
+                        <div class="services-links">
+
+                            <h3 class="text-center mb-4">{{ $infos->city }} Searches</h3>
+
+                            <div class="row servc-links">  
+                                             
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+
+                                    <ul>
+
+                                        @foreach($suggestions_one as $suggestion)
+
+
+
+                                            <li>{!! ucwords($suggestion) !!}</li>
+
+
+                                        @endforeach
+
+                                    </ul>
+
+
+                                </div>
+                                <div class="col-lg-6  col-md-6 col-sm-6">
+
+                                    <ul>
+
+                                        @foreach($suggestions_two as $suggestion)
+
+
+
+                                            <li>{!! ucwords($suggestion) !!}</li>
+
+
+                                        @endforeach
+
+                                    </ul>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="services-links">
+
+                            <h3 class="text-center mb-4">{{ $infos->city }} Typos</h3>
+                            <div class="row servc-links"> 
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+
+                                    <ul>                                 
+
+                                        @if (count($typos)>10)
+
+                                            @for ($i = 0; $i < count($typos); $i++)
+                                            <li>{{ $typos[$i]}}</li>
+                                                @if ($i==10)
+                                                    <?php break; ?>
+                                                 @endif
+                                            @endfor
+
+                                            @else
+                                                @foreach ($typos as $typ)
+                                                <li>{{ $typ}}</li>
+                                                @endforeach
+                                                                                      
+                                        @endif                                    
+                                       
+                                    </ul>
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+
+                                    <ul>                                 
+
+                                        @if (count($typos)>10)
+
+                                            @for ($i = 10; $i < count($typos); $i++)
+                                            <li>{{ $typos[$i]}}</li>
+
+                                            @if ($i==20)
+                                                <?php break; ?>
+                                            @endif
+                                            @endfor
+
+                                           
+                                                                                      
+                                        @endif                                    
+                                       
+                                    </ul>
+
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+
+                                    <ul>                                 
+
+                                        @if (count($typos)>10)
+
+                                            @for ($i = 30; $i < count($typos); $i++)
+                                            <li>{{ $typos[$i]}}</li>
+                                                @if ($i==40)
+                                                    <?php break; ?>
+                                                @endif
+                                            @endfor
+                                                                      
+                                        @endif                                    
+                                       
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+
 
 
                     </section>
@@ -191,44 +298,17 @@ onload="getMap()"
                     <br><br>
 
 
-                    <div class="cities-tabs">
-                        <ul class="nav nav-tabs" id="myTab4" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="#info4" data-toggle="tab" href="#info4" role="tab"
-                                    aria-controls="info4" aria-selected="true">More Info</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="#email4" data-toggle="tab" href="#email4" role="tab"
-                                    aria-controls="email4" aria-selected="false">Email</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="#phone4" data-toggle="tab" href="#phone4" role="tab"
-                                    aria-controls="phone4" aria-selected="false">Phone</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="#web4" data-toggle="tab" href="#web4" role="tab"
-                                    aria-controls="web4" aria-selected="false">Website</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent4">
-                            <div class="tab-pane fade show active" id="info4" role="tabpanel" aria-labelledby="info4">
-                                {{ $infos->first()->moreinfo }}
-                            </div>
-                            <div class="tab-pane fade" id="email4" role="tabpanel" aria-labelledby="email4">
-                                {{ $infos->first()->email }}</div>
-                            <div class="tab-pane fade" id="phone4" role="tabpanel" aria-labelledby="phone4">
-                                {{ $infos->first()->phone }}</div>
-                            <div class="tab-pane fade" id="web4" role="tabpanel" aria-labelledby="web4">
-                                {{ $infos->first()->url }}</div>
-                        </div>
+
+                    <h2 class="pb-3 text-center">{{ $infos->city }} Map </h2>
+
+                    <div class="text-center">
+                        <img width="100%"
+                            src="https://dev.virtualearth.net/REST/V1/Imagery/Map/Road/{{ $infos->city }}?mapSize=1000,400&format=png&key=AisLiQj-dlDXaBcoot9LEHP8GmPqNc5KjOrW0Em3sDviC311ziEHt2dK-1WDyoqZ"
+                            alt="Bing Map of miami">
+
                     </div>
 
-
-                    <h2 class="pb-3 text-center">Find us in: </h2>
-
-                    <div style="width: 100%; height: 450px" id="mapContainer">
-                    </div>
-
+                    <br><br>
 
 
 
@@ -275,65 +355,4 @@ onload="getMap()"
 
 @include('footer')
 
-@endsection
-
-
-
-
-
-@section('scripts')
-
-
-<script>
-    document.getElementById("mapContainer").addEventListener("load", getMap);
-
-
-    function getMap() {
-        console.log("inside");
-        var citi = "{{ $info=$infos->first()->city }}";
-
-
-        if (citi.includes("tekirda")) {
-            citi = "Tekirdağ"
-        }
-        console.log(citi);
-        $.ajax({
-            url: 'https://geocoder.ls.hereapi.com/6.2/geocode.json?apiKey=F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s&gen=9&searchtext=' +
-                citi,
-            type: 'GET',
-            data: citi,
-            success: function (result) {
-                console.log(result);
-
-                var longt = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"][
-                    "Longitude"
-                ];
-                var latit = result["Response"]["View"][0]["Result"][0]["Location"]["DisplayPosition"][
-                    "Latitude"
-                ];
-
-
-                var platform = new H.service.Platform({
-                    'apikey': 'F8AWLo4qe51rnLMUknCs8HPYGwl7Q7p_5TNVahy0a8s'
-                });
-
-                // Obtain the default map types from the platform object
-                var maptypes = platform.createDefaultLayers();
-
-                // Instantiate (and display) a map object:
-                var map = new H.Map(
-                    document.getElementById('mapContainer'),
-                    maptypes.vector.normal.map, {
-                        zoom: 10,
-                        center: {
-                            lng: longt,
-                            lat: latit
-                        }
-                    });
-
-            }
-        });
-    }
-
-</script>
 @endsection

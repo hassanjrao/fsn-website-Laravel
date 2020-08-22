@@ -164,6 +164,38 @@
 
     });
 
+    $('#l-name').on('focus', function() {
+		// trigger loading api.js (recaptcha.js) script
+		var head = document.getElementsByTagName('head')[0];
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = 'https://www.google.com/recaptcha/api.js';
+		
+
+		head.appendChild(script);
+
+		// remove focus to avoid js error:
+		// Uncaught Error: reCAPTCHA has already been rendered in this element at Object.kh
+		$('#l-name','#f-name').off('focus');
+	});
+	
+	
+	 $('#f-name').on('focus', function() {
+		// trigger loading api.js (recaptcha.js) script
+		var head = document.getElementsByTagName('head')[0];
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = 'https://www.google.com/recaptcha/api.js';
+		
+
+		head.appendChild(script);
+
+		// remove focus to avoid js error:
+		// Uncaught Error: reCAPTCHA has already been rendered in this element at Object.kh
+		$('#l-name','#f-name').off('focus');
+	});
+
+
 
     $("#enquiry-submit").click(function () {
 
@@ -178,7 +210,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "contact.php",
+                url: "{{ route('contact') }}",
                 data: $("#enquiry-form").serialize(),
                 success: function (response) {
                     console.log(response);
@@ -201,7 +233,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "contact.php",
+                url: "contact",
                 data: $("#captcha-form").serialize(),
                 success: function (response) {
                     console.log(response);

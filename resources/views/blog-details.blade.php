@@ -11,15 +11,24 @@ Blog
         <div class="row">
             <div class="col-lg-12 col-md-12 order-md-1 order-1">
 
-                <div class="blog__details__text">
-                    <img src="{{ asset('/storage/images/blog/') }}/{{ $blog->image }}" alt="">
-                    
-                    <h2>{{ $blog->title }}</h2>
+                @php
 
+                    $title=str_replace("Vcity$", $city,$blog->title);
+                    $body=str_replace("Vcity$", $city,$blog->body);
 
-                    {!! $blog->body !!}
                    
-                       
+                @endphp
+
+                <div class="blog__details__text">
+                    <img src="{{ asset('/storage/images/blog/') }}/{{ $blog->image }}"
+                        alt="">
+
+                    <h2>{{ $title }}</h2>
+
+
+                    {!! $body !!}
+
+
                 </div>
             </div>
         </div>
